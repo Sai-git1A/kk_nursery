@@ -1,0 +1,50 @@
+@media screen and (max-width: 680px) {
+    #Navbar {
+        height: 80px;
+    }
+
+    #Title {
+        font-size: 1.5rem;
+    }
+
+    .nav-icons {
+        font-size: 1.4rem;
+    }
+
+    .search, .btn-search {
+        position: absolute;
+        bottom: 8%;
+    }
+
+    .search {
+        left: 0;
+        width: 90vw;
+    }
+
+    .btn-search {
+        right: 0;
+    }
+
+    .btn-profile, .btn-cart {
+        position: absolute;
+        top: 12%;
+    }
+
+    .btn-profile {
+        right: 12%;
+    }
+
+    .btn-cart {
+        right: 2%;
+    }
+
+    .cart-count {
+        height: 14px;
+        width: 14px;
+        position: absolute;
+        top: -40%;
+        right: -30%;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
