@@ -12,7 +12,9 @@ const cart = () => {
 export default function Navbar(props) {
     return (
         <div id='Navbar' className='navbar'>
+        <div className='title-box'>
         <h1 id='Title' className='title'>Krishna Kumari Nursery</h1>
+        </div>
         <div className='nav-items'>
         <div className='search-box'>
         <input className='search' type='text' name='search-text' placeholder='Search for all kinds of plants' />

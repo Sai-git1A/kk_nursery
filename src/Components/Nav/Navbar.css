@@ -2,6 +2,7 @@
 
 #Navbar {
     box-shadow: 0 5px 5px lightgrey;
+    display: flex;
     position: absolute;
     width: 100vw;
     height: 50px;
@@ -9,12 +10,18 @@
     top: 0px;
 }
 
+.title-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 50%;
+}
+
 #Title {
     color: green;
-    font-family: 'Kalam', cursive;
-    position: absolute;
-    left: 1%;
-    top: 0;
+    font-family: 'kalam', cursive;
+    margin: 1%;
 }
 
 .nav-items {
@@ -23,13 +30,14 @@
     justify-content: flex-end;
     height: 100%;
     padding-right: 1%;
+    width: 50%;
 }
 
 .search-box {
     border: 1px solid #4E944F;
     border-radius: 16px;
     display: flex;
-    margin-right: 1.5%;
+    margin-right: 3%;
     padding: 0 1.5%;
     justify-content: space-between;
     width: 200px;
@@ -57,7 +65,7 @@
     border: none;
     background-color: #0000;
     cursor: pointer;
-    margin-right: 1.5%;
+    margin-right: 3%;
 }
 
 .nav-icons {

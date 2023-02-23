@@ -3,6 +3,10 @@
         height: 80px;
     }
 
+    #Navbar .title-box {
+        height: 50%;
+    }
+
     #Title {
         font-size: 1.5rem;
     }
