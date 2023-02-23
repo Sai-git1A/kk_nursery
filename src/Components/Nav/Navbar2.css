@@ -1,5 +1,5 @@
-@media screen and (max-width: 680px) {
-    #Navbar {
+@media only screen and (max-width: 680px) {
+    body #Navbar {
         height: 80px;
     }
 
@@ -7,22 +7,11 @@
         font-size: 1.5rem;
     }
 
-    .nav-icons {
-        font-size: 1.4rem;
-    }
-
-    .search, .btn-search {
+    #Navbar .search-box {
         position: absolute;
         bottom: 8%;
-    }
-
-    .search {
-        left: 0;
-        width: 90vw;
-    }
-
-    .btn-search {
-        right: 0;
+        margin-right: 0;
+        width: 95vw;
     }
 
     .btn-profile, .btn-cart {
@@ -38,7 +27,7 @@
         right: 2%;
     }
 
-    .cart-count {
+    .btn-cart .cart-count {
         height: 14px;
         width: 14px;
         position: absolute;

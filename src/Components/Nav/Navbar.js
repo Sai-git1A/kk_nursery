@@ -1,10 +1,6 @@
 import React from 'react';
 import './Navbar.css';
 
-const search = () => {
-    alert('Search');
-}
-
 const profile = () => {
     alert('Profile');
 }
@@ -18,8 +14,10 @@ export default function Navbar(props) {
         <div id='Navbar' className='navbar'>
         <h1 id='Title' className='title'>Krishna Kumari Nursery</h1>
         <div className='nav-items'>
-            <input className='search' type='name' name='search-text' placeholder='Search' />
-            <button className='btn btn-search' onClick={() => search()}><i className="fa-solid fa-magnifying-glass nav-icons"></i></button>
+        <div className='search-box'>
+        <input className='search' type='text' name='search-text' placeholder='Search for all kinds of plants' />
+        <button className='btn btn-search' type='submit'><i className="fa-solid fa-magnifying-glass nav-icons"></i></button>
+        </div>
             <button className='btn btn-profile' onClick={() => profile()}><i className="fa-solid fa-user nav-icons"></i></button>
             <button className='btn btn-cart' onClick={() => cart()}><i className="fa-solid fa-basket-shopping nav-icons"></i><span className='cart-count'>0</span></button>
         </div>

@@ -25,10 +25,24 @@
     padding-right: 1%;
 }
 
-.search {
+.search-box {
     border: 1px solid #4E944F;
     border-radius: 16px;
-    font-size: 1rem;
+    display: flex;
+    margin-right: 1.5%;
+    padding: 0 1.5%;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.search:focus + .search-box {
+    border: 2px solid #4E944F;
+}
+
+.search {
+    border: none;
+    border-radius: 16px;
+    font-size: 0.8rem;
     height: 25px;
     padding: 0.2%;
     padding-left: 1%;
@@ -37,7 +51,6 @@
 
 .search:focus {
     outline: none;
-    border: 2px solid #4E944F;
 }
 
 .btn {
