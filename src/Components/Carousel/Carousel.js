@@ -21,7 +21,7 @@ export default function Carousel(data) {
         return () => {
             resetTimeout();
         }
-    }, [index]);
+    }, [index, data]);
 
     return (
         <>

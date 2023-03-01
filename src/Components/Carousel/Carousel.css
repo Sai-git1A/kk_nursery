@@ -29,7 +29,7 @@
   border-radius: 50%;
   cursor: pointer;
   margin: 15px 7px 0px;
-  background-color: grey;
+  background-color: #fff;
 }
 
 .carousel-dot.active {
