@@ -1,0 +1,37 @@
+#Carousel {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 98vw;
+}
+
+.carousel-slider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.carousel-slide {
+  border-radius: 12px;
+  display: inline-block;
+  height: 500px;
+  width: 98vw;
+}
+
+.carousel-dots {
+  text-align: center;
+  position: relative;
+  bottom: 40px;
+}
+
+.carousel-dot {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+  background-color: grey;
+}
+
+.carousel-dot.active {
+  background-color: #4E944F;
+}

@@ -11,9 +11,10 @@ const cart = () => {
 
 export default function Navbar(props) {
     return (
+        <>
         <div id='Navbar' className='navbar'>
         <div className='title-box'>
-        <h1 id='Title' className='title'>Krishna Kumari Nursery</h1>
+        <h1 id='Title' className='title'>KK Nursery</h1>
         </div>
         <div className='nav-items'>
         <div className='search-box'>
@@ -24,5 +25,7 @@ export default function Navbar(props) {
             <button className='btn btn-cart' onClick={() => cart()}><i className="fa-solid fa-basket-shopping nav-icons"></i><span className='cart-count'>0</span></button>
         </div>
         </div>
+        <div className='hidden'></div>
+        </>
     )
 }

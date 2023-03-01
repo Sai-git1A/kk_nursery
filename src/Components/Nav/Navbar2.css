@@ -7,7 +7,7 @@
         height: 50%;
     }
 
-    #Title {
+    #Title{
         font-size: 1.5rem;
     }
 
@@ -39,5 +39,9 @@
         right: -30%;
         font-size: 0.8rem;
         text-align: center;
+    }
+
+    body .hidden {
+        height: 80px;
     }
 }
