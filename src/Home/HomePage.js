@@ -11,7 +11,9 @@ function Home () {
     }, []);
 
     const fetchData = async () => {
-        const response = await fetch('https://kk-nursery.onrender.com/carousel');
+        const response = await fetch('https://kk-nursery.onrender.com/carousel', {
+            mode: 'cors'
+        });
         const data = await response.json();
         setData(data);
       };

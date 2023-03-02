@@ -35,3 +35,9 @@
 .carousel-dot.active {
   background-color: #4E944F;
 }
+
+@media only screen and (max-width: 680px) {
+  .carousel-slide {
+    height: 50vw;
+  }
+}
