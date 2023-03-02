@@ -1,0 +1,40 @@
+.category-title {
+    font-family: sans-serif;
+}
+
+#Category {
+    display: flex;
+    padding: 1%;
+}
+
+.category-item {
+    background-color: #E9EFC0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.5%;
+    padding: 1%;
+    cursor: pointer;
+}
+
+.category-img {
+    width: 40%;
+}
+
+.category-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    #Category {
+        flex-wrap: wrap;
+    }
+
+    .category-item {
+        width: 100vw;
+    }
+}

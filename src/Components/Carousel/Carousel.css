@@ -40,4 +40,9 @@
   .carousel-slide {
     height: 50vw;
   }
+
+  .carousel-dot {
+    height: 10px;
+    width: 10px;
+  }
 }
