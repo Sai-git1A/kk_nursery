@@ -32,8 +32,8 @@ export default function Carousel(data) {
             ))}
             </div>
             <div className='carousel-dots'>
-            {data.data.length > 0 && data.data.map((_,idx) => (
-                <div key={idx} className='carousel-dot' onClick={() => setIndex(idx)}></div>
+            {data.data.length > 0 && data.data.map((item, idx) => (
+                <div key={item._id} className={`carousel-dot ${idx === index ? '.carousel-dot-active' : ''}`} onClick={() => setIndex(idx)}></div>
             ))}
             </div>
         </div>

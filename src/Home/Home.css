@@ -1,0 +1,70 @@
+.popular-indoor-plants {
+    display: flex;
+    overflow: scroll;
+    padding: 1%;
+    cursor: pointer;
+}
+
+.popular-indoor-plants::-webkit-scrollbar {
+    display: none;
+}
+
+.pip-title {
+    font-family: sans-serif;
+}
+
+.pip {
+    border-radius: 12px;
+    box-shadow: 2px 4px 6px #4E944F;
+    padding: 1%;
+    margin-left: 1.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: ease 0.2s;
+}
+
+.pip:hover {
+    transform: scale(1.01);
+}
+
+.pip-img {
+    width: 200px;
+}
+
+.pip-name {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    margin: 2%;
+}
+
+.pip-price {
+    color: #4E944F;
+    font-family: 'kalam', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn-atc {
+    background-color: #4E944F;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    padding: 4%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .pip {
+        padding: 2%;
+        margin-left: 2%;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .pip {
+        padding: 4%;
+        margin-left: 2.5%;
+    }
+}
