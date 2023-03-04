@@ -15,7 +15,7 @@
 
 .pip {
     border-radius: 12px;
-    box-shadow: 2px 4px 6px #4E944F;
+    box-shadow: 2px 4px 6px lightgrey;
     padding: 1%;
     margin-left: 1.5%;
     display: flex;
@@ -54,6 +54,25 @@
     font-family: sans-serif;
     padding: 4%;
     width: 100%;
+}
+
+.circular-progress {
+    background-color: lightgrey;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+.progress {
+    background-color: #fff;
+    padding: 5%;
 }
 
 @media only screen and (max-width: 1000px) {

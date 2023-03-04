@@ -5,7 +5,12 @@
 #Category {
     display: flex;
     padding: 1%;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
+    overflow: scroll;
+}
+
+#Category::-webkit-scrollbar {
+    display: none;
 }
 
 .category-item {
@@ -14,13 +19,14 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 0.5%;
-    padding: 1%;
+    margin: 1%;
+    padding: 1% 2%;
     cursor: pointer;
 }
 
 .category-img {
-    width: 40%;
+    margin-left: 2%;
+    width: 100px;
 }
 
 .category-name {
@@ -30,18 +36,12 @@
     text-align: center;
 }
 
-@media only screen and (max-width: 1000px) {
-    #Category {
-        flex-wrap: wrap;
-    }
-
-    .category-item {
-        width: 100vw;
-    }
-}
-
 @media only screen and (max-width:680px){
     .category-title {
         font-size: 1.5rem;
+    }
+
+    .category-item {
+        padding: 2% 4%;
     }
 }
