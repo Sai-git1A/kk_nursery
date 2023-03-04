@@ -40,9 +40,10 @@
 
 .pip-price {
     color: #4E944F;
-    font-family: 'kalam', cursive;
+    font-family: sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
+    margin: 2%;
 }
 
 .btn-atc {
@@ -63,6 +64,9 @@
 }
 
 @media only screen and (max-width: 680px) {
+    .pip-title {
+        font-size: 1.5rem;
+    }
     .pip {
         padding: 4%;
         margin-left: 2.5%;

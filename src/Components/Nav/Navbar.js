@@ -14,7 +14,7 @@ export default function Navbar(props) {
         <>
         <div id='Navbar' className='navbar'>
         <div className='title-box'>
-        <h1 id='Title' className='title'>KK Nursery</h1>
+        <h1 id='Title' className='title'>KK Nurseries</h1>
         </div>
         <div className='nav-items'>
         <div className='search-box'>
