@@ -1,16 +1,17 @@
+body {
+    font-family: sans-serif;
+}
+
 .popular-indoor-plants {
     display: flex;
     overflow: scroll;
+    margin-bottom: 3%;
     padding: 1%;
     cursor: pointer;
 }
 
 .popular-indoor-plants::-webkit-scrollbar {
     display: none;
-}
-
-.pip-title {
-    font-family: sans-serif;
 }
 
 .pip {
@@ -34,7 +35,6 @@
 
 .pip-name {
     font-size: 1.5rem;
-    font-family: sans-serif;
     margin: 2%;
 }
 
@@ -51,14 +51,29 @@
     border: none;
     color: #fff;
     font-size: 1.2rem;
-    font-family: sans-serif;
     padding: 4%;
     width: 100%;
 }
 
+.swo {
+    display: flex;
+}
+
+.gardening, .landscaping {
+    margin: 1%;
+}
+
+.gardening-img, .landscaping-img {
+    width: 100%;
+}
+
+.footer {
+    background-color: #E9EFC0;
+    display: flex;
+}
+
 .circular-progress {
-    background-color: lightgrey;
-    opacity: 0.5;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,11 +83,6 @@
     height: 100vh;
     width: 100vw;
     z-index: 1;
-}
-
-.progress {
-    background-color: #fff;
-    padding: 5%;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -89,5 +99,17 @@
     .pip {
         padding: 4%;
         margin-left: 2.5%;
+    }
+
+    .swo-title {
+        font-size: 1.5rem;
+    }
+
+    .swo {
+        flex-wrap: wrap;
+    }
+
+    .gardening, .landscaping {
+        margin: 2%;
     }
 }

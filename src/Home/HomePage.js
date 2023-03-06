@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { CircularProgress } from '@mui/material';
+import { CircularProgress, styled } from '@mui/material';
 import Navbar from '../Components/Nav/Navbar';
 import Carousel from '../Components/Carousel/Carousel';
 import Category from '../Components/Category/Category';
@@ -15,6 +15,10 @@ function Home () {
     useEffect(() => {
         fetchData();
     }, []);
+
+    const StyledCircularProgress = styled(CircularProgress) ({
+        color: '#4E944F'
+    })
 
     const fetchData = async () => {
         setLoading(true);
@@ -35,6 +39,8 @@ return (
     <Navbar />
     <Carousel data={carousel}/>
     <Category data={category} />
+
+    {/* Popular Indoor Plants */}
     <h1 className='pip-title'>POPULAR INDOOR PLANTS</h1>
     <div className='popular-indoor-plants'>
         {pIndoorPlants.length > 0 && pIndoorPlants.map(item => (
@@ -46,10 +52,30 @@ return (
             </div>
         ))}
     </div>
-    {loading && <div className='circular-progress'>
-    <div className='progress'>
-    <CircularProgress />
+
+    {/* Services We Offer */}
+    <h1 className='swo-title'>SERVICES WE OFFER</h1>
+    <div className='swo'>
+        <div className='gardening'><img className='gardening-img' src='https://res.cloudinary.com/safedb/image/upload/v1678078579/KK%20Nursery/Services%20We%20Offer/Gardening_oe3vkw.jpg' alt='Gardening' /></div>
+        <div className='landscaping'><img className='landscaping-img' src='https://res.cloudinary.com/safedb/image/upload/v1678078579/KK%20Nursery/Services%20We%20Offer/Landscaping_yvfj2j.jpg' alt='Landscaping'/></div>
     </div>
+
+    {/* Footer */}
+    <div className='footer'>
+        <div className='about-us'>
+            <h1>About Us</h1>
+        </div>
+        <div className='contact-us'>
+            <h1>Contact Us</h1>
+        </div>
+        <div className='follow-us'>
+            <h1>Follow Us</h1>
+        </div>
+    </div>
+
+    {/* Circular Progress */}
+    {loading && <div className='circular-progress'>
+    <StyledCircularProgress />
     </div>}
     </>
 );
