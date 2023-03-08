@@ -1,19 +1,29 @@
 .category {
     display: flex;
+    margin-top: 0.5%;
 }
 
 .category::-webkit-scrollbar {
     display: none;
 }
 
-.category-banner {
-    width: 100%;
+.listing-category-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
 }
 
 .listing {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.listing::-webkit-scrollbar {
+    display: none;
 }
 
 .list-item {
@@ -55,7 +65,7 @@
         overflow: scroll;
     }
 
-    .category-name {
+    .listing-category-name {
         font-size: 0.8rem;
     }
 
@@ -64,7 +74,7 @@
     }
 
     .list-item-img {
-        width: 150px;
+        width: 160px;
     }
 
     .list-item-name {

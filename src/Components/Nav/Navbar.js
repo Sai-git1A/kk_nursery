@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './Navbar.css';
 
 const profile = () => {
@@ -14,7 +15,7 @@ export default function Navbar(props) {
         <>
         <div id='Navbar' className='navbar'>
         <div className='title-box'>
-        <h1 id='Title' className='title'>KK Nurseries</h1>
+        <Link className='nav-title' to="/"><h1 id='Title' className='title'>KK Nurseries</h1></Link>
         </div>
         <div className='nav-items'>
         <div className='search-box'>

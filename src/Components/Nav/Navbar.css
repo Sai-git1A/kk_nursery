@@ -25,6 +25,10 @@
     margin: 1%;
 }
 
+.nav-title {
+    width: 100%;
+}
+
 .nav-items {
     display: flex;
     align-items: center;
