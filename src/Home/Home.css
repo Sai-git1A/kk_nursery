@@ -67,42 +67,6 @@ body {
     width: 100%;
 }
 
-.footer {
-    background-color: #E9EFC0;
-    display: flex;
-    justify-content: center;
-}
-
-.footer div {
-    margin: 2%;
-    text-align: center;
-}
-
-.footer span {
-    color: #4E944F;
-    cursor: pointer;
-}
-
-a {
-    text-decoration: none;
-}
-
-.about-us-link {
-    font-size: 2.5rem;
-    font-weight: bold;
-    font-family: 'kalam', cursive;
-    text-decoration: underline;
-}
-
-.contact-us-link {
-    font-weight: bold;
-}
-
-.follow-us-link {
-    margin: 0 4%;
-    font-size: 1.5rem;
-}
-
 .circular-progress {
     background-color: #fff;
     display: flex;
@@ -142,9 +106,5 @@ a {
 
     .gardening, .landscaping {
         margin: 2%;
-    }
-
-    .footer {
-        flex-wrap: wrap;
     }
 }

@@ -26,7 +26,8 @@ export default function Carousel(data) {
     return (
         <>
         <div id='Carousel' className='carousel'>
-            <div className='carousel-slider' style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
+            <div className='carousel-slider' 
+            style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
             {data.data.length > 0 && data.data.map((item) => (
                 <div key={item._id} className='carousel-slide' style={{backgroundImage:`url(${item.imgURL})`, backgroundSize: 'cover'}}></div>
             ))}
