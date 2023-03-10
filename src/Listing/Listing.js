@@ -1,22 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../Components/Nav/Navbar";
+import Footer from "../Components/Footer/Footer";
 import './Listing.css';
 
 export default function Listing() {
 
+    const navigate = useNavigate();
     const param = useParams();
     const category = JSON.parse(localStorage.getItem('category'));
     const [list, setList] = useState([]);
 
     const fetchData = async (title) => {
         const res = await axios.get('https://kk-nursery.onrender.com/'+ title.replace(/\s+/g, '-'));
-        setList((items) => [...items.concat(res.data)] );
+        setList(res.data);
     }
 
     function handelClick(title) {
-        alert(title);
+        navigate('/listing/' + title.toLowerCase());
+        fetchData(title.toLowerCase());
     }
 
     useEffect(() => {
@@ -43,6 +46,7 @@ export default function Listing() {
                 </div>
             ))}
         </div>
+        <Footer />
         </>
     )
 }

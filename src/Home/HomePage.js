@@ -57,8 +57,8 @@ return (
     {/* Services We Offer */}
     <h1 className='swo-title'>SERVICES WE OFFER</h1>
     <div className='swo'>
-        <div className='gardening'><img className='gardening-img' src='https://res.cloudinary.com/safedb/image/upload/v1678078579/KK%20Nursery/Services%20We%20Offer/Gardening_oe3vkw.jpg' alt='Gardening' /></div>
-        <div className='landscaping'><img className='landscaping-img' src='https://res.cloudinary.com/safedb/image/upload/v1678078579/KK%20Nursery/Services%20We%20Offer/Landscaping_yvfj2j.jpg' alt='Landscaping'/></div>
+        <div className='gardening' onClick={() => alert('Gardening')}><img className='gardening-img' src='https://res.cloudinary.com/safedb/image/upload/v1678078579/KK%20Nursery/Services%20We%20Offer/Gardening_oe3vkw.jpg' alt='Gardening' /></div>
+        <div className='landscaping' onClick={() => alert('Landscaping')}><img className='landscaping-img' src='https://res.cloudinary.com/safedb/image/upload/v1678078579/KK%20Nursery/Services%20We%20Offer/Landscaping_yvfj2j.jpg' alt='Landscaping'/></div>
     </div>
 
     {/* Footer */}

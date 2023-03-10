@@ -60,6 +60,7 @@ body {
 }
 
 .gardening, .landscaping {
+    cursor: pointer;
     margin: 1%;
 }
 
