@@ -15,8 +15,9 @@ body {
 }
 
 .pip {
+    border: 1px solid lightgrey;
     border-radius: 12px;
-    box-shadow: 2px 4px 6px lightgrey;
+    /* box-shadow: 2px 4px 6px lightgrey; */
     padding: 1%;
     margin-left: 1.5%;
     display: flex;

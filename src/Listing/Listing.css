@@ -7,6 +7,36 @@
     display: none;
 }
 
+.filter {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5% 0;
+}
+
+.btn-sort {
+    background-color: #4E944F;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.8%;
+}
+
+.sort {
+    border: 1px solid lightgrey;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 1%;
+    position: absolute;
+    right: 0;
+    width: 20vw;
+    z-index: 1;
+}
+
+.sort-item {
+    padding: 4%;
+    cursor: pointer;
+}
+
 .listing-category-name {
     font-size: 1.2rem;
     font-weight: bold;
@@ -27,8 +57,8 @@
 }
 
 .list-item {
+    border: 1px solid lightgrey;
     border-radius: 12px;
-    box-shadow: 2px 4px 6px lightgrey;
     padding: 1%;
     display: flex;
     margin-left: 1.5%;
@@ -43,7 +73,7 @@
 }
 
 .list-item-img {
-    width: 200px;
+    width: 250px;
 }
 
 .list-item-name {
@@ -79,5 +109,17 @@
 
     .list-item-name {
         font-size: 1rem;
+    }
+
+    .filter {
+        margin: 2% 0;
+    }
+
+    .btn-sort {
+        padding: 2%;
+    }
+
+    .sort {
+        width: 90vw;
     }
 }

@@ -19,13 +19,13 @@ export default function Footer() {
             <Link to='https://www.youtube.com/@srikrishnakumarinursery' target='_blank'>
             <span className='follow-us-link'><i className="fa-brands fa-youtube"></i></span>
             </Link>
-            <Link to='www.facebook.com'>
+            <Link to='www.facebook.com' target='_blank'>
             <span className='follow-us-link'><i className="fa-brands fa-facebook"></i></span>
             </Link>
-            <Link to='www.twitter.com'>
+            <Link to='www.twitter.com' target='_blank'>
             <span className='follow-us-link'><i className="fa-brands fa-twitter"></i></span>
             </Link>
-            <Link to='www.instagram.com'>
+            <Link to='www.instagram.com' target='_blank'>
             <span className='follow-us-link'><i className="fa-brands fa-instagram"></i></span>
             </Link>
         </div>
