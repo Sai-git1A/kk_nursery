@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { CircularProgress, styled } from '@mui/material';
 import Navbar from '../Components/Nav/Navbar';
 import Carousel from '../Components/Carousel/Carousel';
@@ -8,6 +9,8 @@ import Footer from '../Components/Footer/Footer';
 import './Home.css';
 
 function Home () {
+
+    const navigate = useNavigate();
     const [carousel, setCarousel] = useState([]);
     const [category, setCategory] = useState([]);
     const [pIndoorPlants, setPIndoorPlants] = useState([]);
@@ -31,6 +34,10 @@ function Home () {
         color: '#4E944F'
     });
 
+    function handelClick(title) {
+        navigate('/details/' + title)
+    }
+
     useEffect(() => {
         fetchData();
     }, []);
@@ -45,7 +52,7 @@ return (
     <h1 className='pip-title'>POPULAR INDOOR PLANTS</h1>
     <div className='popular-indoor-plants'>
         {pIndoorPlants.length > 0 && pIndoorPlants.map(item => (
-            <div className='pip' key={item._id}>
+            <div className='pip' key={item._id} onClick={() => handelClick(item.title)}>
                 <img className='pip-img' src={item.imgURL} alt={item.id}/>
                 <span className='pip-name'>{item.title}</span>
                 <span className='pip-price'>₹{item.price}</span>

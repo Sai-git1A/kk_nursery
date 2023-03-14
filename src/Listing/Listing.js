@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { CircularProgress, styled } from '@mui/material';
 import Navbar from "../Components/Nav/Navbar";
 import Footer from "../Components/Footer/Footer";
 import './Listing.css';
@@ -14,13 +15,20 @@ export default function Listing() {
     const radioHL = useRef(null);
     const radioAZ = useRef(null);
     const radioZA = useRef(null);
+    const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState(false);
     const category = JSON.parse(localStorage.getItem('category'));
     const [list, setList] = useState([]);
 
+    const StyledCircularProgress = styled(CircularProgress) ({
+        color: '#4E944F'
+    });
+
     const fetchData = async (title) => {
+        setLoading(true);
         const res = await axios.get('https://kk-nursery.onrender.com/'+ title.replace(/\s+/g, '-'));
         setList(res.data[0].body);
+        setLoading(false);
     }
 
     function handelClick(title) {
@@ -32,6 +40,10 @@ export default function Listing() {
         if (btnSort.current.innerHTML === 'SORT BY') {
             btnSort.current.innerHTML = 'APPLY';
         } else {
+            radioLH.current.checked = false;
+            radioHL.current.checked = false;
+            radioAZ.current.checked = false;
+            radioZA.current.checked = false;
             btnSort.current.innerHTML = 'SORT BY';
         }
         setStatus(!status);
@@ -85,6 +97,9 @@ export default function Listing() {
             <div className="sort-item" onClick={() => handelZA()}><input type='radio' name="sort" ref={radioZA} />Alphabetically, Z to A</div>
         </div>
         <div className="listing">
+            {loading && <div className='circular-progress'>
+            <StyledCircularProgress />
+            </div>}
             {list.length > 0 && list.map(item => (
                 <div className="list-item" key={item.id}>
                     <img className="list-item-img" src={item.imgURL} alt={item.title}/>
