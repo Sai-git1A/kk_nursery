@@ -10,6 +10,10 @@ export default function Listing() {
     const navigate = useNavigate();
     const param = useParams();
     const btnSort = useRef(null);
+    const radioLH = useRef(null);
+    const radioHL = useRef(null);
+    const radioAZ = useRef(null);
+    const radioZA = useRef(null);
     const [status, setStatus] = useState(false);
     const category = JSON.parse(localStorage.getItem('category'));
     const [list, setList] = useState([]);
@@ -34,21 +38,25 @@ export default function Listing() {
     }
 
     function handelLH() {
+        radioLH.current.checked = true;
         const filterData = list.sort((a, b) => a.price - b.price);
         setList(filterData);
     }
 
     function handelHL() {
+        radioHL.current.checked = true;
         const filterData = list.sort((a, b) => b.price - a.price);
         setList(filterData);
     }
 
     function handelAZ() {
+        radioAZ.current.checked = true;
         const filterData = list.sort((a, b) => a.title.localeCompare(b.title));
         setList(filterData);
     }
 
     function handelZA() {
+        radioZA.current.checked = true;
         const filterData = list.sort((a, b) => b.title.localeCompare(a.title));
         setList(filterData);
     }
@@ -71,10 +79,10 @@ export default function Listing() {
             <button className="btn-sort" ref={btnSort} onClick={() => handelSort()}>SORT BY</button>
         </div>
         <div className="sort" style={{display:status?"block":"none"}}>
-            <div className="sort-item" onClick={() => handelLH()}>Price, Low to High</div>
-            <div className="sort-item" onClick={() => handelHL()}>Price, High to Low</div>
-            <div className="sort-item" onClick={() => handelAZ()}>Alphabetically, A to Z</div>
-            <div className="sort-item" onClick={() => handelZA()}>Alphabetically, Z to A</div>
+            <div className="sort-item" onClick={() => handelLH()}><input type='radio' name="sort" ref={radioLH} />Price, Low to High</div>
+            <div className="sort-item" onClick={() => handelHL()}><input type='radio' name="sort" ref={radioHL} />Price, High to Low</div>
+            <div className="sort-item" onClick={() => handelAZ()}><input type='radio' name="sort" ref={radioAZ} />Alphabetically, A to Z</div>
+            <div className="sort-item" onClick={() => handelZA()}><input type='radio' name="sort" ref={radioZA} />Alphabetically, Z to A</div>
         </div>
         <div className="listing">
             {list.length > 0 && list.map(item => (
