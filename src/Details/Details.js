@@ -38,10 +38,13 @@ export default function() {
                 <img className="details-img" src={item.imgURL} alt={details.name}/>
                 <div className="details-content">
                     <h1 className="details-name">{details.name}</h1>
-                    <h2 className="details-s-name">{details.scientificName}</h2>
-                    <div className="details-tags">{details.specifications ? details.specifications.map(item => <span className="details-tag" key={item}>{item}</span>) : ''}</div>
                     <span className="details-price">₹{item.price}</span>
                     <button className="btn-details-atc">ADD TO CART</button>
+                    <button className="btn-details-bin">BUY IT NOW</button>
+                    <div className="description">
+                    <h2 className="details-s-name">{details.scientificName}</h2>
+                    <div className="details-tags">{details.specifications ? details.specifications.map(item => <span className="details-tag" key={item}>{item}</span>) : ''}</div>
+                    </div>
                 </div>
             </div>}
             <Footer />

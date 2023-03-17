@@ -29,13 +29,6 @@
   border-radius: 50%;
   cursor: pointer;
   margin: 15px 7px 0px;
-  background-color: #fff;
-}
-
-.carousel-dot-active {
-  height: 12px;
-  width: 12px;
-  background-color: #4E944F;
 }
 
 @media only screen and (max-width: 680px) {
