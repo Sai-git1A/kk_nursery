@@ -1,0 +1,85 @@
+.details {
+    display: flex;
+    padding: 4%;
+}
+
+.details-img {
+    margin-right: 5%;
+    width: 50%;
+}
+
+.details-content {
+    width: 100%;
+}
+
+.details-s-name {
+    font-family: 'kalam', cursive;
+    text-decoration: underline;
+    margin: 0;
+}
+
+.details-tags {
+    margin-top: 4%;
+}
+
+.details-tag {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #4E944F;
+    color: #4E944F;
+    font-weight: bold;
+    margin-right: 2%;
+    padding: 2%;
+}
+
+.details-price {
+    color: #4E944F;
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 4%;
+}
+
+.btn-details-atc {
+    background-color: #4E944F;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 2%;
+    padding: 2%;
+    width: 80%;
+}
+
+@media only screen and (max-width: 865px) {
+    .btn-details-atc {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 745px) {
+    .details {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .details-img {
+        width: 80%;
+    }
+
+    .details-content {
+        text-align: center;
+    }
+
+    .details-tags {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .details-tag {
+        margin-bottom: 1%;
+    }
+
+    .btn-details-atc {
+        width: 80%;
+    }
+}

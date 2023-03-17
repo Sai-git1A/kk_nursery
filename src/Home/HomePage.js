@@ -34,7 +34,12 @@ function Home () {
         color: '#4E944F'
     });
 
-    function handelClick(title) {
+    function handelClick(title, img, price) {
+        const obj = {
+            imgURL: img,
+            price: price
+        }
+        localStorage.setItem('item', JSON.stringify(obj));
         navigate('/details/' + title)
     }
 
@@ -52,7 +57,7 @@ return (
     <h1 className='pip-title'>POPULAR INDOOR PLANTS</h1>
     <div className='popular-indoor-plants'>
         {pIndoorPlants.length > 0 && pIndoorPlants.map(item => (
-            <div className='pip' key={item._id} onClick={() => handelClick(item.title)}>
+            <div className='pip' key={item._id} onClick={() => handelClick(item.title, item.imgURL, item.price)}>
                 <img className='pip-img' src={item.imgURL} alt={item.id}/>
                 <span className='pip-name'>{item.title}</span>
                 <span className='pip-price'>₹{item.price}</span>

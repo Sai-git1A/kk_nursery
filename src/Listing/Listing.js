@@ -36,6 +36,15 @@ export default function Listing() {
         fetchData(title.toLowerCase());
     }
 
+    function handelItemClick(title, img, price) {
+        const obj = {
+            imgURL: img,
+            price: price
+        }
+        localStorage.setItem('item', JSON.stringify(obj));
+        navigate('/details/' + title);
+    }
+
     function handelSort() {
         if (btnSort.current.innerHTML === 'SORT BY') {
             btnSort.current.innerHTML = 'APPLY';
@@ -101,7 +110,7 @@ export default function Listing() {
             <StyledCircularProgress />
             </div>}
             {list.length > 0 && list.map(item => (
-                <div className="list-item" key={item.id}>
+                <div className="list-item" key={item.id} onClick={() => handelItemClick(item.title, item.imgURL, item.price)}>
                     <img className="list-item-img" src={item.imgURL} alt={item.title}/>
                     <span className="list-item-name">{item.title}</span>
                     <span className="list-item-price">₹{item.price}</span>
