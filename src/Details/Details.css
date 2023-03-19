@@ -5,11 +5,16 @@
 
 .details-img {
     margin-right: 5%;
-    width: 50%;
 }
 
 .details-content {
+    overflow-y: scroll;
+    height: 512px;
     width: 100%;
+}
+
+.details-content::-webkit-scrollbar {
+    display: none;
 }
 
 .details-price {
@@ -45,7 +50,6 @@
 .description {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 2px 4px 12px lightgrey;
     margin-top: 2%;
     padding: 2%;
 }
@@ -59,6 +63,7 @@
 .details-tags {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 5%;
 }
 
 .details-tag {
@@ -71,6 +76,27 @@
     margin-right: 2%;
     margin-bottom: 2%;
     padding: 2%;
+}
+
+.des-item {
+    border: 1px solid #4E944F;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.des-item-diseases {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.des-item-img {
+    margin-right: 2%;
+    width: 50px;
+}
+
+.des-item-text {
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 745px) {

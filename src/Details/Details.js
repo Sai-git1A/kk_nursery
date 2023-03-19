@@ -4,6 +4,7 @@ import axios from "axios";
 import { CircularProgress, styled } from '@mui/material';
 import Navbar from "../Components/Nav/Navbar";
 import Footer from "../Components/Footer/Footer";
+import data from '../Details.json';
 import './Details.css';
 
 export default function() {
@@ -44,6 +45,34 @@ export default function() {
                     <div className="description">
                     <h2 className="details-s-name">{details.scientificName}</h2>
                     <div className="details-tags">{details.specifications ? details.specifications.map(item => <span className="details-tag" key={item}>{item}</span>) : ''}</div>
+                    <div className="des-item">
+                        <img className="des-item-img" src={data.watering} alt="img"/>
+                        <span className="des-item-text">{details.watering}</span>
+                    </div>
+                    <div className="des-item">
+                        <img className="des-item-img" src={data.temperature} alt="img"/>
+                        <span className="des-item-text">{details.temperature}</span>
+                    </div>
+                    <div className="des-item">
+                        <img className="des-item-img" src={data.sunlight} alt="img"/>
+                        <span className="des-item-text">{details.sunlight}</span>
+                    </div>
+                    <div className="des-item">
+                        <img className="des-item-img" src={data.soil} alt="img"/>
+                        <span className="des-item-text">{details.soil}</span>
+                    </div>
+                    <div className="des-item">
+                        <img className="des-item-img" src={data.diseases} alt="img"/>
+                        <div className="des-item-diseases">{details.diseases ? details.diseases.map(item => <span className="des-item-text" key={item}>{item} -</span>) : ''}</div>
+                    </div>
+                    <div className="des-item">
+                        <img className="des-item-img" src={data.humidity} alt="img"/>
+                        <span className="des-item-text">{details.humidity}</span>
+                    </div>
+                    <div className="des-item">
+                        <img className="des-item-img" src={data.repoting} alt="img"/>
+                        <span className="des-item-text">{details.repoting}</span>
+                    </div>
                     </div>
                 </div>
             </div>}
