@@ -6,6 +6,8 @@ import Navbar from '../Components/Nav/Navbar';
 import Carousel from '../Components/Carousel/Carousel';
 import Category from '../Components/Category/Category';
 import Footer from '../Components/Footer/Footer';
+import data from '../Carousel.json';
+import data2 from '../Category.json';
 import './Home.css';
 
 function Home () {
@@ -18,16 +20,11 @@ function Home () {
 
     const fetchData = async () => {
         setLoading(true);
-        const [resCarousel, resCategory, resPIndoorPlants] = await Promise.all([
-            axios.get('https://kk-nursery.onrender.com/carousel'),
-            axios.get('https://kk-nursery.onrender.com/category'),
+        const [resPIndoorPlants] = await Promise.all([
             axios.get('https://kk-nursery.onrender.com/popular-indoor-plants')
         ]);
-        setCarousel(resCarousel.data);
-        setCategory(resCategory.data);
         setPIndoorPlants(resPIndoorPlants.data);
         setLoading(false);
-        localStorage.setItem('category', JSON.stringify(resCategory.data));
     }
 
     const StyledCircularProgress = styled(CircularProgress) ({
@@ -45,6 +42,9 @@ function Home () {
 
     useEffect(() => {
         fetchData();
+        setCarousel(data);
+        setCategory(data2);
+        localStorage.setItem('category', JSON.stringify(data2));
     }, []);
 
 return (

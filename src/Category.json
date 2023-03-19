@@ -1,0 +1,28 @@
+[
+    {
+      "id":"1",
+      "imgURL":"https://res.cloudinary.com/safedb/image/upload/v1677909324/KK%20Nursery/Catogery/Indoor_Plants_t9orzj.png",
+      "title":"INDOOR PLANTS"
+    },
+    {
+      "id":"2",
+      "imgURL":"https://res.cloudinary.com/safedb/image/upload/v1677909324/KK%20Nursery/Catogery/Outdoor_Plants_lckmk7.png",
+      "title":"OUTDOOR PLANTS"
+    },
+    {
+      "id":"3",
+      "imgURL":"https://res.cloudinary.com/safedb/image/upload/v1677909325/KK%20Nursery/Catogery/Succulents_jjetyg.png",
+      "title":"SUCCULENTS"
+    },
+    {
+      "id":"4",
+      "imgURL":"https://res.cloudinary.com/safedb/image/upload/v1677909325/KK%20Nursery/Catogery/Flowering_Plants_ml0kl1.png",
+      "title":"FLOWERING PLANTS"
+    },
+    {
+      "id":"5",
+      "imgURL":"https://res.cloudinary.com/safedb/image/upload/v1677909324/KK%20Nursery/Catogery/Planting_Pots_cen245.png",
+      "title":"PLANTING POTS"
+    }
+  ]
+  
