@@ -21,8 +21,8 @@ export default function Navbar(props) {
 
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(props.data));
-        setCartData(JSON.parse(localStorage.getItem('cart')));
-        setCount(props.data.length);
+        setCartData(JSON.parse(localStorage.getItem('cart')) || props.data);
+        setCount(JSON.parse(localStorage.getItem('cart')).length || props.data.length);
     }, [props]);
 
     return (

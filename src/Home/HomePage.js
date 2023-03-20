@@ -13,17 +13,16 @@ import './Home.css';
 function Home () {
 
     const navigate = useNavigate();
+    const cartData = JSON.parse(localStorage.getItem('cart')) || [];
     const [carousel, setCarousel] = useState([]);
     const [category, setCategory] = useState([]);
     const [pIndoorPlants, setPIndoorPlants] = useState([]);
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState(cartData);
     const [loading, setLoading] = useState(false);
 
     const fetchData = async () => {
         setLoading(true);
-        const [resPIndoorPlants] = await Promise.all([
-            axios.get('https://kk-nursery.onrender.com/popular-indoor-plants')
-        ]);
+        const resPIndoorPlants = await axios.get('https://kk-nursery.onrender.com/popular-indoor-plants')
         setPIndoorPlants(resPIndoorPlants.data);
         setLoading(false);
     }

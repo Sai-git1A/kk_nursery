@@ -103,7 +103,7 @@
     top: 0;
     right: 0;
     padding: 1%;
-    height: 60vh;
+    height: 80vh;
     width: 30vw;
     overflow-y: scroll;
     z-index: 1;
@@ -132,7 +132,7 @@
 }
 
 .cart-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .cart-item {
