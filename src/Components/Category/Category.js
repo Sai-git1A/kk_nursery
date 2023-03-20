@@ -15,7 +15,7 @@ export default function Category(data) {
             <h1 className='category-title'>YOU CAN FIND</h1>
             <div id='Category' className='category'>
             {data.data.length > 0 && data.data.map(item => (
-                <div key={item._id} className='category-item' onClick={() => handelClick(item.title)}>
+                <div key={item.id} className='category-item' onClick={() => handelClick(item.title)}>
                     <img className='category-img' src={item.imgURL} alt={item.id} />
                     <span className='category-name'>{item.title}</span>
                 </div>

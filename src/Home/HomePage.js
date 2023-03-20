@@ -16,6 +16,7 @@ function Home () {
     const [carousel, setCarousel] = useState([]);
     const [category, setCategory] = useState([]);
     const [pIndoorPlants, setPIndoorPlants] = useState([]);
+    const [cart, setCart] = useState([]);
     const [loading, setLoading] = useState(false);
 
     const fetchData = async () => {
@@ -40,6 +41,10 @@ function Home () {
         navigate('/details/' + title)
     }
 
+    function handelATC(key, img, title, price) {
+        setCart(preval => [...preval, {key: key, imgURL: img, title: title, price: price}]);
+    }
+
     useEffect(() => {
         fetchData();
         setCarousel(data);
@@ -49,7 +54,7 @@ function Home () {
 
 return (
     <>
-    <Navbar />
+    <Navbar data={cart}/>
     <Carousel data={carousel}/>
     <Category data={category} />
 
@@ -57,11 +62,11 @@ return (
     <h1 className='pip-title'>POPULAR INDOOR PLANTS</h1>
     <div className='popular-indoor-plants'>
         {pIndoorPlants.length > 0 && pIndoorPlants.map(item => (
-            <div className='pip' key={item._id} onClick={() => handelClick(item.title, item.imgURL, item.price)}>
-                <img className='pip-img' src={item.imgURL} alt={item.id}/>
+            <div className='pip' key={item._id}>
+                <img className='pip-img' src={item.imgURL} onClick={() => handelClick(item.title, item.imgURL, item.price)} alt={item.id}/>
                 <span className='pip-name'>{item.title}</span>
                 <span className='pip-price'>₹{item.price}</span>
-                <button className='btn-atc' onClick={() => alert(item.title)}>ADD TO CART</button>
+                <button className='btn-atc' onClick={() => handelATC(item._id, item.imgURL, item.title, item.price)}>ADD TO CART</button>
             </div>
         ))}
     </div>

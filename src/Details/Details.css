@@ -87,7 +87,7 @@
 
 .des-item-diseases {
     display: inline-flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .des-item-img {

@@ -63,7 +63,7 @@ export default function() {
                     </div>
                     <div className="des-item">
                         <img className="des-item-img" src={data.diseases} alt="img"/>
-                        <div className="des-item-diseases">{details.diseases ? details.diseases.map(item => <span className="des-item-text" key={item}>{item} -</span>) : ''}</div>
+                        <div className="des-item-diseases">{details.diseases ? details.diseases.map(item => <span className="des-item-text" key={item}>{item}</span>) : ''}</div>
                     </div>
                     <div className="des-item">
                         <img className="des-item-img" src={data.humidity} alt="img"/>

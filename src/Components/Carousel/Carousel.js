@@ -29,12 +29,12 @@ export default function Carousel(data) {
             <div className='carousel-slider' 
             style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
             {data.data.length > 0 && data.data.map((item) => (
-                <div key={item._id} className='carousel-slide' style={{backgroundImage:`url(${item.imgURL})`, backgroundSize: 'cover'}}></div>
+                <div key={item.id} className='carousel-slide' style={{backgroundImage:`url(${item.imgURL})`, backgroundSize: 'cover'}}></div>
             ))}
             </div>
             <div className='carousel-dots'>
             {data.data.length > 0 && data.data.map((item, idx) => (
-                <div key={item._id} className='carousel-dot' style={{backgroundColor: `${idx === index ? '#fff' : 'lightgrey'}`, height: `${idx === index ? '12px' : '10px'}`, width: `${idx === index ? '12px' : '10px'}`}} onClick={() => setIndex(idx)}></div>
+                <div key={item.id} className='carousel-dot' style={{backgroundColor: `${idx === index ? '#fff' : 'lightgrey'}`, height: `${idx === index ? '12px' : '10px'}`, width: `${idx === index ? '12px' : '10px'}`}} onClick={() => setIndex(idx)}></div>
             ))}
             </div>
         </div>
