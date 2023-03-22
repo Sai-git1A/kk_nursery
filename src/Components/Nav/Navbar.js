@@ -46,11 +46,23 @@ export default function Navbar(props) {
                 <span className='cart-title'>Your Cart</span>
                 <button className='btn-cart-close' onClick={() => cartClose()}><i className="fa-solid fa-xmark cart-icon"></i></button>
             </div>
+            <div className='cart-items'>
             {cartData.length > 0 && cartData.map(item => <div className='cart-item' key={item.key}>
             <img className='cart-item-img' src={item.imgURL} alt='cart-img'/>
-            <span className='cart-item-title'>{item.title}</span>
-            <span className='cart-item-price'>₹{item.price}</span>
+            <div className='cart-item-content'>
+            <div className='cart-item-box-1'>
+                <span className='cart-item-title'>{item.title}</span>
+                <span className='cart-item-price'>₹{item.price}</span>
+                <button className='cart-btn remove'><i className="fa-solid fa-trash cart-icon"></i></button>
+            </div>
+            <div className='cart-item-box-2'>
+                <button className='cart-btn minus'><i className="fa-solid fa-minus cart-icon"></i></button>
+                <span className='quantity'>0</span>
+                <button className='cart-btn add'><i className="fa-solid fa-plus cart-icon"></i></button>
+            </div>
+            </div>
             </div>)}
+            </div>
         </div>}
         </>
     )
