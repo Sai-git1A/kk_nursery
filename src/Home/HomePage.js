@@ -13,11 +13,15 @@ import './Home.css';
 function Home () {
 
     const navigate = useNavigate();
-    const cartData = JSON.parse(localStorage.getItem('cart')) || [];
     const [carousel, setCarousel] = useState([]);
     const [category, setCategory] = useState([]);
     const [pIndoorPlants, setPIndoorPlants] = useState([]);
-    const [cart, setCart] = useState(cartData);
+    const [cart, setCart] = useState(() => {
+        const cartData = localStorage.getItem('cart');
+        if (cartData !== null) {
+            return JSON.parse(cartData);
+        }
+    });
     const [loading, setLoading] = useState(false);
 
     const fetchData = async () => {
@@ -41,7 +45,7 @@ function Home () {
     }
 
     function handelATC(key, img, title, price) {
-        setCart(preval => [...preval, {key: key, imgURL: img, title: title, price: price}]);
+        setCart(preval => [...preval, {key: key, imgURL: img, title: title, price: price, count:1}]);
     }
 
     useEffect(() => {

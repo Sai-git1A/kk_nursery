@@ -19,10 +19,38 @@ export default function Navbar(props) {
         setCart(false);
     }
 
+    const handelDelete = (title) => {
+        const filterCart = cartData.filter(item => item.title !== title);
+        setCartData(filterCart);
+        localStorage.setItem('cart', JSON.stringify(filterCart));
+    }
+
+    const handelAdd = (key) => {
+        const updatedCart = cartData.map(item => {
+            if (item.key === key) {
+                return {...item, count: item.count+1}
+            }
+            return item;
+        })
+        setCartData(updatedCart);
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+    }
+
+    const handelMinus = (key) => {
+        const updatedCart = cartData.map(item => {
+            if (item.key === key) {
+                return {...item, count: item.count-1}
+            }
+            return item;
+        })
+        setCartData(updatedCart);
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+    }
+
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(props.data));
-        setCartData(JSON.parse(localStorage.getItem('cart')) || props.data);
-        setCount(JSON.parse(localStorage.getItem('cart')).length || props.data.length);
+        setCartData(props.data);
+        setCount(props.data ? props.data.length : 0);
     }, [props]);
 
     return (
@@ -53,12 +81,12 @@ export default function Navbar(props) {
             <div className='cart-item-box-1'>
                 <span className='cart-item-title'>{item.title}</span>
                 <span className='cart-item-price'>₹{item.price}</span>
-                <button className='cart-btn remove'><i className="fa-solid fa-trash cart-icon"></i></button>
+                <button className='cart-btn remove' onClick={() => handelDelete(item.title)}><i className="fa-solid fa-trash cart-icon"></i></button>
             </div>
             <div className='cart-item-box-2'>
-                <button className='cart-btn minus'><i className="fa-solid fa-minus cart-icon"></i></button>
-                <span className='quantity'>0</span>
-                <button className='cart-btn add'><i className="fa-solid fa-plus cart-icon"></i></button>
+                <button className='cart-btn minus' onClick={() => handelMinus(item.key)}><i className="fa-solid fa-minus cart-icon"></i></button>
+                <span className='quantity'>{item.count}</span>
+                <button className='cart-btn add' onClick={() => handelAdd(item.key)}><i className="fa-solid fa-plus cart-icon"></i></button>
             </div>
             </div>
             </div>)}
