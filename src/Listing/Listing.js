@@ -19,6 +19,7 @@ export default function Listing() {
     const [status, setStatus] = useState(false);
     const category = JSON.parse(localStorage.getItem('category'));
     const [list, setList] = useState([]);
+    const [cart, setCart] = useState([]);
 
     const StyledCircularProgress = styled(CircularProgress) ({
         color: '#4E944F'
@@ -82,13 +83,17 @@ export default function Listing() {
         setList(filterData);
     }
 
+    function handelATC(key, img, title, price) {
+        setCart(preval => [...preval, {key: key, imgURL: img, title: title, price: price, count:1}]);
+    }
+
     useEffect(() => {
         fetchData(param.name);
     }, []);
 
     return (
         <>
-        <Navbar />
+        <Navbar data={cart} />
         <div className="category">
         {category.length > 0 && category.map(item => (
             <div className="category-item" key={item._id} onClick={() => handelClick(item.title)} style={{backgroundColor: item.title.toLowerCase() === param.name? '#fff':'#E9EFC0'}}>
@@ -110,11 +115,11 @@ export default function Listing() {
             <StyledCircularProgress />
             </div>}
             {list.length > 0 && list.map(item => (
-                <div className="list-item" key={item.id} onClick={() => handelItemClick(item.title, item.imgURL, item.price)}>
-                    <img className="list-item-img" src={item.imgURL} alt={item.title}/>
+                <div className="list-item" key={item.id}>
+                    <img className="list-item-img" src={item.imgURL} onClick={() => handelItemClick(item.title, item.imgURL, item.price)} alt={item.title}/>
                     <span className="list-item-name">{item.title}</span>
                     <span className="list-item-price">₹{item.price}</span>
-                    <button className='btn-atc' onClick={() => alert(item.title)}>ADD TO CART</button>
+                    <button className='btn-atc' onClick={() => handelATC(item.id, item.imgURL, item.title, item.price)}>ADD TO CART</button>
                 </div>
             ))}
         </div>

@@ -73,6 +73,7 @@
 }
 
 .list-item-img {
+    cursor: pointer;
     width: 250px;
 }
 

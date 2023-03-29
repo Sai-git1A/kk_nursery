@@ -91,6 +91,9 @@ export default function Navbar(props) {
             </div>
             </div>)}
             </div>
+            <div className='cart-footer'>
+                <button className='cart-btn checkout'>CHECKOUT</button>
+            </div>
         </div>}
         </>
     )
