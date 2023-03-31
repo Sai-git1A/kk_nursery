@@ -129,6 +129,9 @@
 }
 
 .profile:hover + .profile-items, .profile-items:hover {
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -140,8 +143,6 @@
 
 .cart {
     background-color: #fff;
-    border-left: 2px solid lightgrey;
-    border-bottom: 2px solid lightgrey;
     position: absolute;
     top: 0;
     right: 0;
@@ -244,8 +245,3 @@
 .quantity {
     font-size: 1.2rem;
 }
-
-/* .cart-footer {
-    position: absolute;
-    bottom: 0;
-} */

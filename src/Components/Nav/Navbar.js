@@ -77,7 +77,7 @@ export default function Navbar(props) {
         <div className='hidden'></div>
         <div className={isOpen ? 'nav-links nav-links-menu' : 'nav-links nav-links-open'}>
             <Link className='nav-link home' to='/'><span>Home</span></Link>
-            <div className='profile-div'>
+            <div className='nav-link profile-div'>
             <span className='nav-link profile'>Profile</span>
             <div className='profile-items'>
                 <Link className='nav-link about-us' to='/about'><span>About Us</span></Link>
