@@ -69,6 +69,19 @@ export default function Navbar(props) {
         </div>
         </div>
         <div className='hidden'></div>
+        <div className='nav-links'>
+            <Link className='nav-link home' to='/'><span>Home</span></Link>
+            <div className='profile-div'>
+            <span className='nav-link profile'>Profile</span>
+            <div className='profile-items'>
+                <Link className='nav-link about-us' to='/about'><span>About Us</span></Link>
+                <Link className='nav-link services-we-offer' to='/'><span>Services We Offer</span></Link>
+            </div>
+            </div>
+            <Link className='nav-link categories' to='/'><span>Categories</span></Link>
+            <Link className='nav-link testimonials' to='/testimonials'><span>Testimonials</span></Link>
+            <Link className='nav-link contact-us' to='/'><span>Contact Us</span></Link>
+        </div>
         {cart && <div className='cart'>
             <div className='cart-header'>
                 <span className='cart-title'>Your Cart</span>

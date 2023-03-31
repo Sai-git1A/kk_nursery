@@ -5,7 +5,7 @@ import './Footer.css';
 export default function Footer() {
     return (
         <>
-        <div className='footer'>
+        <section className='footer' id="Footer">
         <div className='about-us'>
             <h1 className='about-us-title'>About Us</h1>
             <Link to='/about'><span className='about-us-link'>Hear Our Story</span></Link>
@@ -29,7 +29,7 @@ export default function Footer() {
             <span className='follow-us-link'><i className="fa-brands fa-instagram"></i></span>
             </Link>
         </div>
-        </div>
+        </section>
         </>
     )
 }

@@ -95,6 +95,40 @@
     height: 60px;
 }
 
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+}
+
+.nav-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.nav-link:hover {
+    color: #4E944F;
+}
+
+.profile-items {
+    background-color: #fff;
+    display: none;
+    position: absolute;
+}
+
+.profile:hover + .profile-items, .profile-items:hover {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.about-us, .services-we-offer {
+    padding: 5px ;
+}
+
 .cart {
     background-color: #fff;
     border-left: 2px solid lightgrey;
