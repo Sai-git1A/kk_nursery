@@ -10,6 +10,11 @@ export default function Navbar(props) {
     const [cart, setCart] = useState(false);
     const [count, setCount] = useState(0);
     const [cartData, setCartData] = useState([]);
+    const [isOpen, setIsOpen] = useState(false);
+
+    function menu() {
+        setIsOpen(!isOpen);
+    }
 
     function cartClick() {
         setCart(true);
@@ -57,6 +62,7 @@ export default function Navbar(props) {
         <>
         <div id='Navbar' className='navbar'>
         <div className='title-box'>
+        <button className='menu' onClick={() => menu()}><i className="fa-solid fa-bars nav-icons"></i></button>
         <Link className='nav-title' to="/"><h1 id='Title' className='title'>KK Nurseries</h1></Link>
         </div>
         <div className='nav-items'>
@@ -69,7 +75,7 @@ export default function Navbar(props) {
         </div>
         </div>
         <div className='hidden'></div>
-        <div className='nav-links'>
+        <div className={isOpen ? 'nav-links nav-links-menu' : 'nav-links nav-links-open'}>
             <Link className='nav-link home' to='/'><span>Home</span></Link>
             <div className='profile-div'>
             <span className='nav-link profile'>Profile</span>

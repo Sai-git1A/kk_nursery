@@ -63,8 +63,32 @@
 }
 
 @media only screen and (max-width: 480px) {
-    body .nav-links {
+    #Title{
+        font-size: 1.2rem;
+    }
+
+    body .menu {
+        display: block;
+    }
+
+    body .nav-links-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        padding-left: 20px;
+        height: 100vh;
+        width: 50vw;
+        z-index: 1;
+    }
+
+    body .nav-links-open {
         display: none;
+    }
+
+    body .nav-link {
+        font-size: 1.2rem;
     }
     
     body .cart {
