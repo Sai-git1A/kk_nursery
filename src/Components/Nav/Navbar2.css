@@ -88,8 +88,14 @@
         display: none;
     }
 
-    body .nav-link {
+    body .nav-links-div {
+        border-right: none;
+        display: block;
         margin-bottom: 12%;
+        width: auto;
+    }
+
+    body .nav-link {
         font-size: 1.2rem;
         text-decoration: underline;
     }
