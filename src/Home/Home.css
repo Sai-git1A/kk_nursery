@@ -89,7 +89,7 @@ body {
 .branch-title {
     color: #4E944F;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -142,7 +142,7 @@ body {
 
 @media only screen and (max-width: 480px) {
     .branch-location {
-        height: 300px;
-        width: 400px;
+        height: 200px;
+        width: 300px;
     }
 }
