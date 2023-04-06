@@ -57,6 +57,7 @@ body {
 
 .swo {
     display: flex;
+    margin-bottom: 3%;
 }
 
 .gardening, .landscaping {
@@ -66,6 +67,36 @@ body {
 
 .gardening-img, .landscaping-img {
     width: 100%;
+}
+
+.branches {
+    display: flex;
+    padding: 1%;
+    overflow: scroll;
+}
+
+.branches::-webkit-scrollbar {
+    display: none;
+}
+
+.branch {
+    border: 1px solid lightgrey;
+    border-radius: 12px;
+    padding: 1%;
+    margin-left: 1.5%;
+}
+
+.branch-title {
+    color: #4E944F;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.branch-location {
+    border: none;
+    height: 400px;
+    width: 500px;
 }
 
 .circular-progress {
@@ -89,15 +120,14 @@ body {
 }
 
 @media only screen and (max-width: 680px) {
-    .pip-title {
-        font-size: 1.5rem;
-    }
     .pip {
         padding: 4%;
         margin-left: 2.5%;
     }
 
-    .swo-title {
+    .pip-title, 
+    .swo-title, 
+    .our-branches-title {
         font-size: 1.5rem;
     }
 
@@ -107,5 +137,12 @@ body {
 
     .gardening, .landscaping {
         margin: 2%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .branch-location {
+        height: 300px;
+        width: 400px;
     }
 }

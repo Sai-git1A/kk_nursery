@@ -22,7 +22,7 @@ export default function Footer() {
             <span className="contact-us-link"> srikrishnakumariplantsnursery@gmail.com</span>
             </div>
             <div className="contact-us-link-3">
-            <i class="fa-solid fa-globe"></i>
+            <i className="fa-solid fa-globe"></i>
             <span className="contact-us-link"> kknurseries.com</span>
             </div>
             </div>
