@@ -95,8 +95,8 @@ body {
 
 .branch-location {
     border: none;
-    height: 400px;
-    width: 500px;
+    height: 300px;
+    width: 400px;
 }
 
 .circular-progress {
@@ -141,6 +141,10 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+    .branch {
+        padding: 2%;
+    }
+    
     .branch-location {
         height: 200px;
         width: 300px;

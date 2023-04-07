@@ -72,8 +72,10 @@ export default function Navbar(props) {
         <Link className='nav-title' to="/"><h1 id='Title' className='title'>KK Nurseries</h1></Link>
         </div>
         <div className='nav-items'>
+
+        {/* Search */}
         <div className='search-box'>
-        <input className='search' type='text' name='search-text' placeholder='Search for all kinds of plants' />
+        <input className='search' type='text' name='search-text' placeholder='Search' />
         <button className='btn btn-search' type='submit'><i className="fa-solid fa-magnifying-glass nav-icons"></i></button>
         </div>
             <button className='btn btn-profile' onClick={() => profile()}><i className="fa-solid fa-user nav-icons"></i></button>
@@ -81,6 +83,8 @@ export default function Navbar(props) {
         </div>
         </div>
         <div className='hidden'></div>
+
+        {/* Nav Links */}
         <div className={isOpen ? 'nav-links nav-links-menu' : 'nav-links nav-links-open'}>
             <div className='nav-links-div'>
             <Link className='nav-link home' to='/'><span>Home</span></Link>
@@ -104,7 +108,11 @@ export default function Navbar(props) {
             <Link className='nav-link contact-us' onClick={() => handelContactUs()}><span>Contact Us</span></Link>
             </div>
         </div>
+
+        {/* Dialog */}
         {contactUs && <Dialog onClick={handelContactUs}/>}
+
+        {/* Cart */}
         {cart && <div className='cart'>
             <div className='cart-header'>
                 <span className='cart-title'>Your Cart</span>
