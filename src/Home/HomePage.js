@@ -84,7 +84,7 @@ return (
             <iframe className='branch-location' title='branch-1' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.1622817227067!2d77.44455448120083!3d15.158232759709026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb6efc6d3de3bc3%3A0x452d751978a157c7!2sKK%20Nurseries%20(THIMMAPURAM%2CGUNTAKAL)!5e0!3m2!1sen!2sin!4v1680771907184!5m2!1sen!2sin"></iframe>
         </div>
         <div className='branch'>
-            <span className='branch-title'>RTC Bust Stop, Guntakal Branch</span>
+            <span className='branch-title'>RTC Bus Stop, Guntakal Branch</span>
             <iframe className='branch-location' title='branch-2' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d348.8723047071379!2d77.37955354941225!3d15.161544297702294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb6ef17edb97a91%3A0x5cd69c67e75c239a!2sSRIKRISHNA%20KUMARI%20PLANT&#39;S%20NURSERY%2CAPSRTC%20Bus%20Stand%2CGUNTAKAL!5e0!3m2!1sen!2sin!4v1680772202434!5m2!1sen!2sin"></iframe>
         </div>
         <div className='branch'>
