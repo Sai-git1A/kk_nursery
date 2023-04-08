@@ -47,7 +47,7 @@ export default function() {
                     <div className="details-tags">{details.specifications ? details.specifications.map(item => <span className="details-tag" key={item}>{item}</span>) : ''}</div>
                     <div className="des-item">
                         <img className="des-item-img" src={data.watering} alt="img"/>
-                        <span className="des-item-text">{details.watering}</span>
+                        <span className="des-item-text">Watering, {details.watering}</span>
                     </div>
                     <div className="des-item">
                         <img className="des-item-img" src={data.temperature} alt="img"/>
@@ -67,11 +67,11 @@ export default function() {
                     </div>
                     <div className="des-item">
                         <img className="des-item-img" src={data.humidity} alt="img"/>
-                        <span className="des-item-text">{details.humidity}</span>
+                        <span className="des-item-text">Humidity, {details.humidity}</span>
                     </div>
                     <div className="des-item">
                         <img className="des-item-img" src={data.repoting} alt="img"/>
-                        <span className="des-item-text">{details.repoting}</span>
+                        <span className="des-item-text">Repoting, {details.repoting}</span>
                     </div>
                     </div>
                 </div>
