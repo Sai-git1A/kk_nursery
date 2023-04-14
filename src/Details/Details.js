@@ -12,6 +12,12 @@ export default function() {
     const param = useParams();
     const [loading, setLoading] = useState(false);
     const item = JSON.parse(localStorage.getItem('item'));
+    const [cart, setCart] = useState(() => {
+        const cartData = JSON.parse(localStorage.getItem('cart'));
+        if (cartData !== []) {
+            return cartData;
+        }
+    });
     const [details, setDetails] = useState({});
 
     const StyledCircularProgress = styled(CircularProgress) ({
@@ -25,13 +31,17 @@ export default function() {
         setLoading(false);
     }
 
+    function handelATC(key, img, title, price) {
+        setCart(preval => [...preval, {key: key, imgURL: img, title: title, price: price, count:1}]);
+    }
+
     useEffect(() => {
         fetchData(param.name);
     }, []);
 
     return (
         <>
-            <Navbar />
+            <Navbar data={cart} />
             {loading && <div className='circular-progress'>
             <StyledCircularProgress />
             </div>}
@@ -40,7 +50,7 @@ export default function() {
                 <div className="details-content">
                     <h1 className="details-name">{details.name}</h1>
                     <span className="details-price">₹{item.price}</span>
-                    <button className="btn-details-atc">ADD TO CART</button>
+                    <button className="btn-details-atc" onClick={() => handelATC(details._id, item.imgURL, details.name, item.price)}>ADD TO CART</button>
                     <button className="btn-details-bin">BUY IT NOW</button>
                     <div className="description">
                     <h2 className="details-s-name">{details.scientificName}</h2>
