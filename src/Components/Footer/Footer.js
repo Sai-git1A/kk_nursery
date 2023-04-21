@@ -43,6 +43,9 @@ export default function Footer() {
             </Link>
         </div>
         </section>
+        <div className="copyright">
+            2023 &copy; Copyright. All rights reserved.
+        </div>
         </>
     )
 }

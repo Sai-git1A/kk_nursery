@@ -52,6 +52,12 @@ h1 {
     font-size: 1.2rem;
 }
 
+.copyright {
+    color: grey;
+    font-size: 1rem;
+    text-align: center;
+}
+
 @media only screen and (max-width: 680px) {
     .footer {
         flex-wrap: wrap;
