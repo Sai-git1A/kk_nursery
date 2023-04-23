@@ -3,9 +3,10 @@ import Navbar from '../Components/Nav/Navbar';
 import './SWO.css';
 
 export default function SWO() {
+    const cart = [];
     return (
         <>
-           <Navbar />
+           <Navbar data={cart}/>
            <div className='list'>
             <ul typeof='circle'>
                 <li>Landscape designing</li>
