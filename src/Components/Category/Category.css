@@ -3,10 +3,40 @@
     padding: 1%;
     margin-bottom: 3%;
     overflow: scroll;
+    white-space: nowrap;
+    scroll-behavior: smooth;
 }
 
 #Category::-webkit-scrollbar {
     display: none;
+}
+
+#Category i {
+    cursor: pointer;
+    font-size: 2.6rem;
+    line-height: 40.6px;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 24px;
+    box-shadow: 2px 2px 9px black;
+    color: #fff;
+    position: absolute;
+    top: 125%;
+    transition: ease 0.2s;
+}
+
+#Category i:hover {
+    transform: scale(1.01);
+}
+
+#Category i:first-child {
+    left: 6px;
+}
+
+#Category i:last-child {
+    right: 6px;
 }
 
 .category-item {
@@ -32,7 +62,13 @@
     text-align: center;
 }
 
-@media only screen and (max-width:680px){
+@media only screen and (max-width: 1000px) {
+    #Category i {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:680px) {
     .category-title {
         font-size: 1.5rem;
     }

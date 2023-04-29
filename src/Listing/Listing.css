@@ -94,6 +94,7 @@
 @media only screen and (max-width: 680px) {
     .category {
         overflow: scroll;
+        white-space: nowrap;
     }
 
     .listing-category-name {
