@@ -12,6 +12,7 @@ import './Home.css';
 
 function Home () {
 
+    const userAgent = window.navigator.userAgent;
     const navigate = useNavigate();
     const [carousel, setCarousel] = useState([]);
     const [category, setCategory] = useState([]);
@@ -22,6 +23,7 @@ function Home () {
     const [branchScrollPosition, setBranchScrollPosition] = useState(0);
     const pipDiv = useRef(null);
     const branchDiv = useRef(null);
+    let browserName;
 
     const fetchData = async () => {
         setLoading(true);
@@ -67,6 +69,22 @@ function Home () {
         setBranchScrollPosition(branchDiv.current.scrollLeft);
     }
 
+    if (userAgent.match(/Chrome/i)) {
+        browserName = 'Google Chrome';
+      } else if (userAgent.match(/Safari/i)) {
+        browserName = 'Safari';
+      } else if (userAgent.match(/Firefox/i)) {
+        browserName = 'Mozilla Firefox';
+      } else if (userAgent.match(/Edge/i)) {
+        browserName = 'Microsoft Edge';
+      } else if (userAgent.match(/Opera|OPR\//i)) {
+        browserName = 'Opera';
+      } else if (userAgent.match(/Trident/i) && !userAgent.match(/MSIE/i)) {
+        browserName = 'Microsoft Internet Explorer';
+      } else {
+        browserName = 'Unknown Browser';
+      }
+
     useEffect(() => {
         const handleScroll = () => {
           setPipScrollPosition(pipDiv.current.scrollLeft);
@@ -96,13 +114,15 @@ return (
     <Carousel data={carousel}/>
     <Category data={category} />
 
+    <p style={{display: 'none'}}>{browserName}</p>
+
     {/* Popular Indoor Plants */}
     <h1 className='pip-title'>POPULAR INDOOR PLANTS</h1>
     <div className='popular-indoor-plants' ref={pipDiv}>
     {pipScrollPosition > 0 && <i className="fa-solid fa-circle-arrow-left" onClick={() => pipScrollLeft()}></i>}
         {pIndoorPlants.length > 0 && pIndoorPlants.map(item => (
             <div className='pip' key={item._id}>
-                <img className='pip-img' src={item.imgURL} onClick={() => handelClick(item.title, item.imgURL, item.price)} alt={item.id}/>
+                <img className='pip-img' src={item.imgURL} onClick={() => handelClick(item.title, item.imgURL, item.price)} loading='lazy' alt={item.id}/>
                 <span className='pip-name'>{item.title}</span>
                 <span className='pip-price'>₹{item.price}</span>
                 <button className='btn-atc' onClick={() => handelATC(item._id, item.imgURL, item.title, item.price)}>ADD TO CART</button>

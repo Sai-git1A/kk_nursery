@@ -2,6 +2,10 @@ body {
     font-family: sans-serif;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .popular-indoor-plants {
     display: flex;
     overflow: scroll;
@@ -9,6 +13,7 @@ body {
     padding: 1%;
     white-space: nowrap;
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 .popular-indoor-plants::-webkit-scrollbar {
@@ -100,6 +105,7 @@ body {
     overflow: scroll;
     white-space: nowrap;
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 .branches::-webkit-scrollbar {

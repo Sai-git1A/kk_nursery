@@ -41,7 +41,7 @@ export default function Category(data) {
             {scrollPosition > 0 && <i className="fa-solid fa-circle-arrow-left" onClick={() => handleScrollLeft()}></i>}
             {data.data.length > 0 && data.data.map(item => (
                 <div key={item.id} className='category-item' onClick={() => handelClick(item.title)}>
-                    <img className='category-img' src={item.imgURL} alt={item.id} />
+                    <img className='category-img' src={item.imgURL} loading='lazy' alt={item.id} />
                     <span className='category-name'>{item.title}</span>
                 </div>
             ))}

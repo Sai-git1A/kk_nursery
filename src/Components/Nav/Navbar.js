@@ -121,7 +121,7 @@ export default function Navbar(props) {
             </div>
             <div className='cart-items'>
             {cartData.length > 0 && cartData.map(item => <div className='cart-item' key={item.key}>
-            <img className='cart-item-img' src={item.imgURL} alt='cart-img'/>
+            <img className='cart-item-img' src={item.imgURL} loading='lazy' alt='cart-img'/>
             <div className='cart-item-content'>
             <div className='cart-item-box-1'>
                 <span className='cart-item-title'>{item.title}</span>

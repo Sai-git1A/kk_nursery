@@ -41,7 +41,7 @@ export default function() {
             <StyledCircularProgress />
             </div>}
             {details && <div className="details" key={details._id}>
-                <img className="details-img" src={item.imgURL} alt={details.name}/>
+                <img className="details-img" src={item.imgURL} loading="lazy" alt={details.name}/>
                 <div className="details-content">
                     <h1 className="details-name">{details.name}</h1>
                     <span className="details-price">₹{item.price}</span>
