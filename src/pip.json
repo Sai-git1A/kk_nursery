@@ -1,0 +1,59 @@
+[
+    {
+      "_id": "arecapalm",
+      "id": 1,
+      "imgURL": "https://res.cloudinary.com/safedb/image/upload/v1677819731/KK%20Nursery/Popular%20Indoor%20Plants/Areca_Palm_gsgpry.jpg",
+      "name": "Areca Palm",
+      "price": 149
+    },
+    {
+      "_id": "pothos",
+      "id": 2,
+      "imgURL": "https://res.cloudinary.com/safedb/image/upload/v1677819732/KK%20Nursery/Popular%20Indoor%20Plants/Pothos_eyixix.jpg",
+      "name": "Pothos",
+      "price": 49
+    },
+    {
+      "_id": "alovera",
+      "id": 3,
+      "imgURL": "https://res.cloudinary.com/safedb/image/upload/v1677819731/KK%20Nursery/Popular%20Indoor%20Plants/Alovera_prmkrd.jpg",
+      "name": "Alovera",
+      "price": 49
+    },
+    {
+      "_id": "carssulaovata",
+      "id": 4,
+      "imgURL": "https://res.cloudinary.com/safedb/image/upload/v1677819731/KK%20Nursery/Popular%20Indoor%20Plants/Crassula_Ovata_b9mhpx.jpg",
+      "name": "Jade",
+      "price": 199
+    },
+    {
+      "_id": "aglonema",
+      "id": 5,
+      "imgURL": "https://res.cloudinary.com/safedb/image/upload/v1677819731/KK%20Nursery/Popular%20Indoor%20Plants/Aglonema_kq7ke6.jpg",
+      "name": "Aglonema",
+      "price": 249
+    },
+    {
+      "_id": "peacelily",
+      "id": 6,
+      "imgURL": "https://res.cloudinary.com/safedb/image/upload/v1677819731/KK%20Nursery/Popular%20Indoor%20Plants/Peacelily_sbmzyg.jpg",
+      "name": "Peacelily",
+      "price": 249
+    },
+    {
+      "_id": "rubber",
+      "id": 7,
+      "imgURL": "https://res.cloudinary.com/safedb/image/upload/v1677819732/KK%20Nursery/Popular%20Indoor%20Plants/Rubber_jlfnqc.jpg",
+      "name": "Rubber",
+      "price": 249
+    },
+    {
+      "_id": "snake",
+      "id": 8,
+      "imgURL": "https://res.cloudinary.com/safedb/image/upload/v1677819732/KK%20Nursery/Popular%20Indoor%20Plants/Snake_Plant_eztk7r.jpg",
+      "name": "Snake",
+      "price": 199
+    }
+  ]
+  

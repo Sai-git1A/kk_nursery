@@ -5,6 +5,7 @@
     overflow: scroll;
     white-space: nowrap;
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 #Category::-webkit-scrollbar {

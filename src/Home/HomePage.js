@@ -1,13 +1,14 @@
 import React, { useEffect, useState, useRef } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { CircularProgress, styled } from '@mui/material';
+// import { CircularProgress, styled } from '@mui/material';
 import Navbar from '../Components/Nav/Navbar';
 import Carousel from '../Components/Carousel/Carousel';
 import Category from '../Components/Category/Category';
 import Footer from '../Components/Footer/Footer';
 import data from '../Carousel.json';
 import data2 from '../Category.json';
+import data3 from '../pip.json';
 import './Home.css';
 
 function Home () {
@@ -18,23 +19,23 @@ function Home () {
     const [category, setCategory] = useState([]);
     const [pIndoorPlants, setPIndoorPlants] = useState([]);
     const [cart, setCart] = useState([]);
-    const [loading, setLoading] = useState(false);
+    // const [loading, setLoading] = useState(false);
     const [pipScrollPosition, setPipScrollPosition] = useState(0);
     const [branchScrollPosition, setBranchScrollPosition] = useState(0);
     const pipDiv = useRef(null);
     const branchDiv = useRef(null);
     let browserName;
 
-    const fetchData = async () => {
-        setLoading(true);
-        const resPIndoorPlants = await axios.get('https://kk-nursery.onrender.com/popular-indoor-plants')
-        setPIndoorPlants(resPIndoorPlants.data);
-        setLoading(false);
-    }
+    // const fetchData = async () => {
+    //     setLoading(true);
+    //     const resPIndoorPlants = await axios.get('https://kk-nursery.onrender.com/popular-indoor-plants')
+    //     setPIndoorPlants(resPIndoorPlants.data);
+    //     setLoading(false);
+    // }
 
-    const StyledCircularProgress = styled(CircularProgress) ({
-        color: '#4E944F'
-    });
+    // const StyledCircularProgress = styled(CircularProgress) ({
+    //     color: '#4E944F'
+    // });
 
     function handelClick(title, img, price) {
         const obj = {
@@ -102,9 +103,10 @@ function Home () {
       }, []);
 
     useEffect(() => {
-        fetchData();
+        // fetchData();
         setCarousel(data);
         setCategory(data2);
+        setPIndoorPlants(data3);
         localStorage.setItem('category', JSON.stringify(data2));
     }, []);
 
@@ -165,9 +167,9 @@ return (
     <Footer />
 
     {/* Circular Progress */}
-    {loading && <div className='circular-progress'>
+    {/* {loading && <div className='circular-progress'>
     <StyledCircularProgress />
-    </div>}
+    </div>} */}
     </>
 );
 }
