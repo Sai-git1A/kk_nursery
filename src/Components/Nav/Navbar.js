@@ -70,7 +70,7 @@ export default function Navbar(props) {
         <div id='Navbar' className='navbar'>
         <div className='title-box'>
         <button className='menu' onClick={() => menu()}><i className="fa-solid fa-bars nav-icons"></i></button>
-        <Link className='nav-title' to="/"><h1 id='Title' className='title'>KK Nurseries</h1></Link>
+        <Link className='nav-title' to="#" onClick={() => window.location.reload()}><h1 id='Title' className='title'>KK Nurseries</h1></Link>
         </div>
         <div className='nav-items'>
 
@@ -88,7 +88,7 @@ export default function Navbar(props) {
         {/* Nav Links */}
         <div className={isOpen ? 'nav-links nav-links-menu' : 'nav-links nav-links-open'}>
             <div className='nav-links-div'>
-            <Link className='nav-link home' to='/'><span>Home</span></Link>
+            <Link className='nav-link home' to='#' onClick={() => window.location.reload()}><span>Home</span></Link>
             </div>
             <div className='nav-links-div'>
             <div className='nav-link profile-div'>
