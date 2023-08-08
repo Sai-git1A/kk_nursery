@@ -35,7 +35,7 @@ export default function Footer() {
             <Link to='www.facebook.com' target='_blank'>
             <span className='follow-us-link'><i className="fa-brands fa-facebook"></i></span>
             </Link>
-            <Link to='www.twitter.com' target='_blank'>
+            <Link to='https://api.whatsapp.com/send/?phone=%2B917386722020&text&type=phone_number&app_absent=0' target='_blank'>
             <span className='follow-us-link'><i className="fa-brands fa-whatsapp"></i></span>
             </Link>
             <Link to='www.instagram.com' target='_blank'>
