@@ -43,7 +43,7 @@
 .category-item {
     background-color: #E9EFC0;
     border-radius: 12px;
-    box-shadow: 2px 4px 12px lightgrey;
+    border: 1px solid lightgrey;
     display: flex;
     align-items: center;
     justify-content: space-around;
