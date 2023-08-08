@@ -49,7 +49,7 @@ body::-webkit-scrollbar {
 }
 
 .pip {
-    border: 1px solid lightgrey;
+    box-shadow: 2px 4px 12px lightgrey;
     border-radius: 12px;
     padding: 1%;
     margin-left: 1.5%;
@@ -141,7 +141,7 @@ body::-webkit-scrollbar {
 }
 
 .branch {
-    border: 1px solid lightgrey;
+    box-shadow: 2px 4px 12px lightgrey;
     border-radius: 12px;
     padding: 1%;
     margin-left: 1.5%;

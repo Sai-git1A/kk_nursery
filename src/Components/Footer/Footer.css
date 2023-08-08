@@ -1,7 +1,7 @@
 .footer {
     background-color: #E9EFC0;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .footer div {

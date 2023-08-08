@@ -6,7 +6,7 @@
 }
 
 .swo-item {
-    border: 5px solid #4E944F;
+    box-shadow: 2px 4px 12px lightgrey;
     border-radius: 12px;
     box-sizing: border-box;
     padding: 1%;
