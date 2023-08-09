@@ -6,7 +6,7 @@
 }
 
 .swo-item {
-    box-shadow: 2px 4px 12px lightgrey;
+    border: 5px solid #4E944F;
     border-radius: 12px;
     box-sizing: border-box;
     padding: 1%;
@@ -32,6 +32,7 @@
     .swo-item {
         box-sizing: content-box;
         width: calc(90% - 10px);
+        padding: 2%;
     }
 
     .swo-item-title {
