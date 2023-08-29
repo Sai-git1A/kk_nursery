@@ -1,5 +1,5 @@
 import React, { useState, useEffect }from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import Dialog from '../Dialog/Dialog';
 import './Navbar.css';
 
@@ -8,6 +8,7 @@ const profile = () => {
 }
 
 export default function Navbar(props) {
+    const navigate = useNavigate();
     const [cart, setCart] = useState(false);
     const [count, setCount] = useState(0);
     const [cartData, setCartData] = useState([]);
@@ -70,7 +71,7 @@ export default function Navbar(props) {
         <div id='Navbar' className='navbar'>
         <div className='title-box'>
         <button className='menu' onClick={() => menu()}><i className="fa-solid fa-bars nav-icons"></i></button>
-        <Link className='nav-title' to="#" onClick={() => window.location.reload()}><h1 id='Title' className='title'>KK Nurseries</h1></Link>
+        <h1 id='Title' className='title' onClick={() => navigate('/')}>KK Nurseries</h1>
         </div>
         <div className='nav-items'>
 

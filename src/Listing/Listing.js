@@ -116,7 +116,7 @@ export default function Listing() {
             </div>}
             {list.length > 0 && list.map(item => (
                 <div className="list-item" key={item.id}>
-                    <img className="list-item-img" src={item.imgURL} onClick={() => handelItemClick(item.title, item.imgURL, item.price)} loading="lazy" alt={item.title}/>
+                    <img className="list-item-img" src={item.imgURL} onClick={() => handelItemClick(item.title, item.imgURL, item.price)} loading="eager" alt={item.title}/>
                     <span className="list-item-name">{item.title}</span>
                     <span className="list-item-price">₹{item.price}</span>
                     <button className='btn-atc' onClick={() => handelATC(item.id, item.imgURL, item.title, item.price)}>ADD TO CART</button>

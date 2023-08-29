@@ -2,12 +2,13 @@ body {
     font-family: sans-serif;
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .popular-indoor-plants {
     display: flex;
+    align-items: center;
     overflow: scroll;
     margin-bottom: 3%;
     padding: 1%;
@@ -31,8 +32,6 @@ body::-webkit-scrollbar {
     border-radius: 24px;
     box-shadow: 2px 2px 9px black;
     color: #fff;
-    position: absolute;
-    top: 182%;
     transition: ease 0.2s;
 }
 
@@ -41,10 +40,12 @@ body::-webkit-scrollbar {
 }
 
 .popular-indoor-plants i:first-child {
+    position: absolute;
     left: 6px;
 }
 
 .popular-indoor-plants i:last-child {
+    position: absolute;
     right: 6px;
 }
 
@@ -101,6 +102,7 @@ body::-webkit-scrollbar {
 
 .branches {
     display: flex;
+    align-items: center;
     padding: 1%;
     overflow: scroll;
     white-space: nowrap;
@@ -123,8 +125,6 @@ body::-webkit-scrollbar {
     border-radius: 24px;
     box-shadow: 2px 2px 9px black;
     color: #fff;
-    position: absolute;
-    top: 330%;
     transition: ease 0.2s;
 }
 
@@ -133,10 +133,12 @@ body::-webkit-scrollbar {
 }
 
 .branches i:first-child {
+    position: absolute;
     left: 6px;
 }
 
 .branches i:last-child {
+    position: absolute;
     right: 6px;
 }
 

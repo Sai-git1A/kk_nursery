@@ -22,10 +22,8 @@
 
 #Title {
     color: #4E944F;
+    cursor: pointer;
     margin: 1%;
-}
-
-.nav-title {
     width: 100%;
 }
 

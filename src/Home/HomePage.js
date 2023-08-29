@@ -122,7 +122,7 @@ return (
     {pipScrollPosition > 0 && <i className="fa-solid fa-circle-arrow-left" onClick={() => pipScrollLeft()}></i>}
         {pIndoorPlants.length > 0 && pIndoorPlants.map(item => (
             <div className='pip' key={item._id}>
-                <img className='pip-img' src={item.imgURL} onClick={() => handelClick(item.title, item.imgURL, item.price)} loading='lazy' alt={item.id}/>
+                <img className='pip-img' src={item.imgURL} onClick={() => handelClick(item.title, item.imgURL, item.price)} loading='eager' alt={item.id}/>
                 <span className='pip-name'>{item.title}</span>
                 <span className='pip-price'>₹{item.price}</span>
                 <button className='btn-atc' onClick={() => handelATC(item._id, item.imgURL, item.title, item.price)}>ADD TO CART</button>
