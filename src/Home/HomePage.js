@@ -27,7 +27,7 @@ function Home () {
 
     const fetchData = async () => {
         setLoading(true);
-        const resPIndoorPlants = await axios.get('https://kk-nursery.onrender.com/popular-indoor-plants')
+        const resPIndoorPlants = await axios.get('https://kk-nursery-api.vercel.app/popular-indoor-plants')
         setPIndoorPlants(resPIndoorPlants.data);
         setLoading(false);
     }

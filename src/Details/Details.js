@@ -22,7 +22,7 @@ export default function() {
 
     const fetchData = async (title) => {
         setLoading(true);
-        const res = await axios.get('https://kk-nursery.onrender.com/details/'+ title);
+        const res = await axios.get('https://kk-nursery-api.vercel.app/details/'+ title);
         setDetails(res.data);
         setLoading(false);
     }

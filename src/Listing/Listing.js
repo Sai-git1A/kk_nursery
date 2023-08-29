@@ -27,7 +27,7 @@ export default function Listing() {
 
     const fetchData = async (title) => {
         setLoading(true);
-        const res = await axios.get('https://kk-nursery.onrender.com/'+ title.replace(/\s+/g, '-'));
+        const res = await axios.get('https://kk-nursery-api.vercel.app/'+ title.replace(/\s+/g, '-'));
         setList(res.data[0].body);
         setLoading(false);
     }
