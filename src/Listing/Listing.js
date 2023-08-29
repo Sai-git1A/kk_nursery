@@ -89,7 +89,7 @@ export default function Listing() {
 
     useEffect(() => {
         fetchData(param.name);
-    }, []);
+    }, [param.name]);
 
     return (
         <>
