@@ -33,6 +33,7 @@ export default function Listing() {
     }
 
     function handelClick(title) {
+        setList([]);
         navigate('/listing/' + title.toLowerCase());
         fetchData(title.toLowerCase());
     }
