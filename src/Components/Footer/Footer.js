@@ -28,7 +28,7 @@ export default function Footer() {
             <Link to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i class="fa-brands fa-instagram"></i></Link>
             <Link to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i class="fa-brands fa-twitter"></i></Link>
         </div>
-        <div className="copyright">&#169 KK Nurseries. All rights received 2023.</div>
+        <div className="copyright">&#169; KK Nurseries. All rights received 2023.</div>
         </div>
     )
 }
