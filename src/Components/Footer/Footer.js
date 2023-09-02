@@ -1,20 +1,17 @@
-import React, {useState} from "react";
+import React from "react";
 import {Link, useNavigate} from 'react-router-dom';
-import Dialog from '../Dialog/Dialog';
 import './Footer.css';
 
 export default function Footer() {
     const navigate = useNavigate();
-    const [status, setStatus] = useState(false);
+
     return (
-        <>
         <div className="footer">
         <div className="footer-about-us">
-            <h1 className="footer-about-us-title" onClick={() => navigate('/about')}>Hear our story</h1>
+            <h1 className="footer-about-us-title" onClick={() => navigate('/about')}>Hear Our Story</h1>
         </div>
         <div className="footer-contact-us">
-            <h1 className='contact-us-title'>Ramana Naidu</h1>
-            <span className='contact-us-subtitle'>Owner</span>
+            <h1 className='contact-us-title'>Get In Touch</h1>
             <div className="contact-us-link-1">
             <span className='contact-us-info'>+91-7386-7220-20</span>
             </div>
@@ -31,8 +28,7 @@ export default function Footer() {
             <Link to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i class="fa-brands fa-instagram"></i></Link>
             <Link to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i class="fa-brands fa-twitter"></i></Link>
         </div>
+        <div className="copyright">&#169 KK Nurseries. All rights received 2023.</div>
         </div>
-        {status && <Dialog onClick={() => setStatus(!status)}/>}
-        </>
     )
 }

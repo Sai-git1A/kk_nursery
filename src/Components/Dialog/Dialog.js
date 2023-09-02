@@ -11,8 +11,6 @@ export default function Dialog({onClick}) {
                 <div className='content'>
                 <button className='btn-close' onClick={() => handelClick()}><i className="fa-solid fa-xmark"></i></button>
                 <div className="contact-us-content">
-                <h1 className='contact-us-title'>Ramana Naidu</h1>
-                <span className='contact-us-subtitle'>Owner</span>
                 <div className="contact-us-link-1">
                 <span className='contact-us-info'>+91-7386-7220-20</span>
                 </div>
