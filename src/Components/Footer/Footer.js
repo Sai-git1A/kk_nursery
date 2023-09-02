@@ -1,51 +1,38 @@
-import React from "react";
-import {Link} from 'react-router-dom';
+import React, {useState} from "react";
+import {Link, useNavigate} from 'react-router-dom';
+import Dialog from '../Dialog/Dialog';
 import './Footer.css';
 
 export default function Footer() {
+    const navigate = useNavigate();
+    const [status, setStatus] = useState(false);
     return (
         <>
-        <section className='footer' id="Footer">
-        <div className='about-us'>
-            <h1 className='about-us-title'>About Us</h1>
-            <Link to='/about'><span className='about-us-link'>Hear Our Story</span></Link>
+        <div className="footer">
+        <div className="footer-about-us">
+            <h1 className="footer-about-us-title" onClick={() => navigate('/about')}>Hear our story</h1>
         </div>
-        <div className='contact-us'>
-            <h1 className='contact-us-title'>Contact Us</h1>
-            <div className="contact-us-links">
+        <div className="footer-contact-us">
+            <h1 className='contact-us-title'>Ramana Naidu</h1>
+            <span className='contact-us-subtitle'>Owner</span>
             <div className="contact-us-link-1">
-            <i className="fa-solid fa-phone"></i>
-            <a className='contact-us-link' href="tel:+917386722020"> +91-7386-7220-20</a>
+            <span className='contact-us-info'>+91-7386-7220-20</span>
             </div>
-            <div className="contact-us-link-2">
-            <i className="fa-solid fa-envelope"></i>
-            <a className="contact-us-link" href="mailto:kknurseries.official@gmail.com"> kknurseries.official@gmail.com</a>
+            <div className="contact-us-link-div-2">
+            <span className='contact-us-info'>kknurseries.official@gmail.com</span>
             </div>
             <div className="contact-us-link-3">
-            <i className="fa-solid fa-globe"></i>
-            <span className="contact-us-link"> kknurseries.com</span>
-            </div>
+            <span className="contact-us-info"> kknurseries.com</span>
             </div>
         </div>
-        <div className='follow-us'>
-            <h1 className='follow-us-title'>Follow Us</h1>
-            <Link to='https://www.youtube.com/@srikrishnakumarinursery' target='_blank'>
-            <span className='follow-us-link'><i className="fa-brands fa-youtube"></i></span>
-            </Link>
-            <Link to='www.facebook.com' target='_blank'>
-            <span className='follow-us-link'><i className="fa-brands fa-facebook"></i></span>
-            </Link>
-            <Link to='https://api.whatsapp.com/send/?phone=%2B917386722020&text&type=phone_number&app_absent=0' target='_blank'>
-            <span className='follow-us-link'><i className="fa-brands fa-whatsapp"></i></span>
-            </Link>
-            <Link to='www.instagram.com' target='_blank'>
-            <span className='follow-us-link'><i className="fa-brands fa-instagram"></i></span>
-            </Link>
+        <div className="footer-follow-us">
+            <Link to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i class="fa-brands fa-youtube"></i></Link>
+            <Link to="https://api.whatsapp.com/send/?phone=%2B917386722020&text&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></Link>
+            <Link to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i class="fa-brands fa-instagram"></i></Link>
+            <Link to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i class="fa-brands fa-twitter"></i></Link>
         </div>
-        </section>
-        <div className="copyright">
-            2023 &copy; Copyright. All rights reserved.
         </div>
+        {status && <Dialog onClick={() => setStatus(!status)}/>}
         </>
     )
 }
