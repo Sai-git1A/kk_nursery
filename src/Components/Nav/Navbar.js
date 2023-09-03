@@ -88,6 +88,7 @@ export default function Navbar(props) {
 
         {/* Nav Links */}
         <div className={isOpen ? 'nav-links nav-links-menu' : 'nav-links nav-links-open'}>
+            {isOpen && <button className='btn-menu-close' onClick={() => setIsOpen(!isOpen)}><i className="fa-solid fa-xmark"></i></button>}
             <div className='nav-links-div'>
             <Link className='nav-link home' to='/'><span>Home</span></Link>
             </div>

@@ -19,6 +19,10 @@
     text-decoration: underline;
 }
 
+.footer-contact-us-title {
+    margin-bottom: 4%;
+}
+
 .follow-us-icons {
     color: #4E944F;
     font-size: 2rem;
@@ -30,10 +34,17 @@
     color: grey;
     font-size: 1rem;
     text-align: center;
+    margin-bottom: 5%;
 }
 
 @media only screen and (max-width: 680px) {
     .footer {
         flex-wrap: wrap;
+    }
+
+    .footer-about-us,
+    .footer-contact-us,
+    .footer-follow-us {
+        margin-bottom: 4%;
     }
 }

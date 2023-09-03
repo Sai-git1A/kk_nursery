@@ -12,7 +12,7 @@ export default function Footer() {
             <h1 className="footer-about-us-title" onClick={() => navigate('/about')}>Hear Our Story</h1>
         </div>
         <div className="footer-contact-us">
-            <h1 className='contact-us-title'>Get In Touch</h1>
+            <h1 className='footer-contact-us-title'>Get In Touch</h1>
             <div className="contact-us-link-1">
             <span className='contact-us-info'>+91-7386-7220-20</span>
             </div>
