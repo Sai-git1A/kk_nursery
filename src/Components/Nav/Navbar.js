@@ -127,13 +127,15 @@ export default function Navbar(props) {
             <div className='cart-item-content'>
             <div className='cart-item-box-1'>
                 <span className='cart-item-title'>{item.title}</span>
-                <span className='cart-item-price'>₹{item.price}</span>
                 <button className='cart-btn remove' onClick={() => handelDelete(item.title)}><i className="fa-solid fa-trash cart-icon"></i></button>
             </div>
             <div className='cart-item-box-2'>
+                <span className='cart-item-price'>₹{item.price}</span>
+                <div className='quantity-box'>
                 <button className='cart-btn minus' onClick={() => handelMinus(item.key)}><i className="fa-solid fa-minus cart-icon"></i></button>
                 <span className='quantity'>{item.count}</span>
                 <button className='cart-btn add' onClick={() => handelAdd(item.key)}><i className="fa-solid fa-plus cart-icon"></i></button>
+                </div>
             </div>
             </div>
             </div>)}
