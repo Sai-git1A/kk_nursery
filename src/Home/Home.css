@@ -2,10 +2,6 @@ body {
     font-family: sans-serif;
 }
 
-/* body::-webkit-scrollbar {
-    display: none;
-} */
-
 .popular-indoor-plants {
     display: flex;
     align-items: center;

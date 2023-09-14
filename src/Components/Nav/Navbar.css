@@ -23,6 +23,7 @@
 #Title {
     color: #4E944F;
     cursor: pointer;
+    font-family: kalam;
     margin: 1%;
     width: 100%;
 }
@@ -153,14 +154,14 @@
 }
 
 .profile:hover + .profile-items, .profile-items:hover {
-    border-left: 1px solid lightgrey;
-    border-right: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
+    border-left: 2px solid lightgrey;
+    border-right: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
     display: flex;
     flex-direction: column;
     z-index: 1;
     position: absolute;
-    left: 10vw
+    left: 21.5vw
 }
 
 .about-us, .services-we-offer {

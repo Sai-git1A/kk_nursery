@@ -24,10 +24,10 @@ export default function Footer() {
             </div>
         </div>
         <div className="footer-follow-us">
-            <Link className="follow-us-icons" to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i class="fa-brands fa-youtube"></i></Link>
-            <Link className="follow-us-icons" to="https://api.whatsapp.com/send/?phone=%2B917386722020&text&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"></i></Link>
-            <Link className="follow-us-icons" to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i class="fa-brands fa-instagram"></i></Link>
-            <Link className="follow-us-icons" to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i class="fa-brands fa-twitter"></i></Link>
+            <Link className="follow-us-icons" to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i className="fa-brands fa-youtube"></i></Link>
+            <Link className="follow-us-icons" to="https://api.whatsapp.com/send/?phone=%2B917386722020&text&type=phone_number&app_absent=0" target="_blank"><i className="fa-brands fa-whatsapp"></i></Link>
+            <Link className="follow-us-icons" to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i className="fa-brands fa-instagram"></i></Link>
+            <Link className="follow-us-icons" to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i className="fa-brands fa-twitter"></i></Link>
         </div>
         </div>
         <div className="copyright">&#169; KK Nurseries. All rights received 2023.</div>

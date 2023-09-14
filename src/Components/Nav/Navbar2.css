@@ -98,6 +98,11 @@
     body .nav-link {
         font-size: 1.2rem;
     }
+
+    body .profile:hover + .profile-items, .profile-items:hover {
+        position: absolute;
+        left: 10vw;
+    }
     
     body .cart {
         height: 99vh;
