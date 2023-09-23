@@ -63,10 +63,6 @@
 }
 
 @media only screen and (max-width: 480px) {
-    #Title{
-        font-size: 1.2rem;
-    }
-
     body .menu {
         display: block;
     }
@@ -105,7 +101,7 @@
         border-left: none;
         position: absolute;
         top: 0;
-        left: 37.2vw;
+        left: 37.1vw;
         width: 36vw;
     }
     
