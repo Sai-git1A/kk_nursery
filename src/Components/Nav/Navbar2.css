@@ -97,14 +97,15 @@
 
     body .nav-link {
         font-size: 1.2rem;
+        position: relative;
     }
 
     body .profile:hover + .profile-items, .profile-items:hover {
         border-top: 2px solid lightgrey;
         border-left: none;
         position: absolute;
-        top: 20vh;
-        left: 60.3vw;
+        top: 0;
+        left: 37.2vw;
         width: 36vw;
     }
     
