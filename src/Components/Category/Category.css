@@ -42,7 +42,9 @@
 }
 
 .category-item {
-    background-color: #E9EFC0;
+    background-color: #FFF;
+    border: 1px solid lightgrey;
+    box-shadow: 4px 4px 5px lightgrey;
     border-radius: 12px;
     display: flex;
     align-items: center;
