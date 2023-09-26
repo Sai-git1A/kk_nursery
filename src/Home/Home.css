@@ -85,16 +85,89 @@ body {
 
 .swo {
     display: flex;
+    align-items: center;
+    overflow-y: scroll;
     margin-bottom: 3%;
+    padding: 1%;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
-.gardening, .landscaping {
+.swo::-webkit-scrollbar {
+    display: none;
+}
+
+.swo i {
     cursor: pointer;
-    margin: 1%;
+    font-size: 2.6rem;
+    line-height: 40.6px;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 24px;
+    box-shadow: 2px 2px 9px black;
+    color: #fff;
+    transition: ease 0.2s;
 }
 
-.gardening-img, .landscaping-img {
-    width: 100%;
+.swo i:hover {
+    transform: scale(1.01);
+}
+
+.swo i:first-child {
+    position: absolute;
+    left: 6px;
+}
+
+.swo i:last-child {
+    position: absolute;
+    right: 6px;
+}
+
+.swo-blank {
+    position: relative;
+    height: 200px;
+    width: 400px;
+}
+
+.swo-list-item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid lightgrey;
+    border-radius: 12px;
+    box-shadow: 4px 4px 5px lightgrey;
+    margin-left: 1.5%;
+}
+
+.swo-list-item-title {
+    background-color: #fff;
+    color: #4E944F;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.7;
+}
+
+.landscaping {
+    background-image: url('https://res.cloudinary.com/safedb/image/upload/v1691481994/KK%20Nursery/Services%20We%20Offer/Landscape-Designing_lid6i6.jpg');
+}
+
+.gardening {
+    background-image: url('https://res.cloudinary.com/safedb/image/upload/v1691481993/KK%20Nursery/Services%20We%20Offer/Gardening-Services_fuvpwj.jpg');
+}
+
+.planting {
+    background-image: url('https://res.cloudinary.com/safedb/image/upload/v1691481993/KK%20Nursery/Services%20We%20Offer/Planting-Services_lrpco5.jpg');
+}
+
+.contract-farming {
+    background-image: url('https://res.cloudinary.com/safedb/image/upload/v1691481993/KK%20Nursery/Services%20We%20Offer/Contract-Farming_tzbomr.jpg');
+}
+
+.horticulture {
+    background-image: url('https://res.cloudinary.com/safedb/image/upload/v1691481993/KK%20Nursery/Services%20We%20Offer/Horticulture_ry7vup.jpg');
 }
 
 .branches {
@@ -173,6 +246,10 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
+    .swo i {
+        display: none;
+    }
+    
     .popular-indoor-plants i {
         display: none;
     }
@@ -198,17 +275,21 @@ body {
     .our-branches-title {
         font-size: 1.5rem;
     }
-
-    .swo {
-        flex-wrap: wrap;
-    }
-
-    .gardening, .landscaping {
-        margin: 2%;
-    }
 }
 
 @media only screen and (max-width: 480px) {
+    .swo-list-item {
+        width: 95dvw;
+    }
+
+    .landscaping,
+    .gardening,
+    .planting,
+    .contract-farming,
+    .horticulture {
+        margin-left: 2%;
+    }
+
     .branch {
         padding: 2%;
     }

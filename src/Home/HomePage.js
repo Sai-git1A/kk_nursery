@@ -19,8 +19,10 @@ function Home () {
     const [pIndoorPlants, setPIndoorPlants] = useState([]);
     const [cart, setCart] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [swoScrollPosition, setSwoScrollPosition] = useState(0);
     const [pipScrollPosition, setPipScrollPosition] = useState(0);
     const [branchScrollPosition, setBranchScrollPosition] = useState(0);
+    const swoDiv = useRef(null);
     const pipDiv = useRef(null);
     const branchDiv = useRef(null);
     let browserName;
@@ -48,6 +50,16 @@ function Home () {
     function handelATC(key, img, title, price) {
         setCart(preval => [...preval, {key: key, imgURL: img, title: title, price: price, count:1}]);
     }
+
+    function swoScrollLeft() {
+      swoDiv.current.scrollLeft -= 200;
+      setSwoScrollPosition(swoDiv.current.scrollLeft);
+  }
+  
+  function swoScrollRight() {
+      swoDiv.current.scrollLeft += 200;
+      setSwoScrollPosition(swoDiv.current.scrollLeft);
+  }
 
     function pipScrollLeft() {
         pipDiv.current.scrollLeft -= 200;
@@ -116,6 +128,38 @@ return (
 
     <p style={{display: 'none'}}>{browserName}</p>
 
+    {/* Services We Offer */}
+    <h1 className='swo-title'>SERVICES WE OFFER</h1>
+    <div className='swo' ref={swoDiv}>
+    {swoScrollPosition > 0 && <i className="fa-solid fa-circle-arrow-left" onClick={() => swoScrollLeft()}></i>}
+        <div className='swo-list-item landscaping' onClick={() => alert('Landscaping')}>
+        <div className='swo-blank'>
+        <h1 className='swo-list-item-title'>Landscaping</h1>
+        </div>
+        </div>
+        <div className='swo-list-item gardening' onClick={() => alert('Gardening')}>
+        <div className='swo-blank'>
+        <h1 className='swo-list-item-title'>Gardening</h1>
+        </div>
+        </div>
+        <div className='swo-list-item planting' onClick={() => alert('Planting')}>
+        <div className='swo-blank'>
+        <h1 className='swo-list-item-title'>Planting</h1>
+        </div>
+        </div>
+        <div className='swo-list-item contract-farming' onClick={() => alert('Contract Farming')}>
+        <div className='swo-blank'>
+        <h1 className='swo-list-item-title'>Contract Farming</h1>
+        </div>
+        </div>
+        <div className='swo-list-item horticulture' onClick={() => alert('Horticulture')}>
+        <div className='swo-blank'>
+        <h1 className='swo-list-item-title'>Horticulture</h1>
+        </div>
+        </div>
+        <i className="fa-solid fa-circle-arrow-right" onClick={() => swoScrollRight()}></i>
+    </div>
+
     {/* Popular Indoor Plants */}
     <h1 className='pip-title'>POPULAR INDOOR PLANTS</h1>
     <div className='popular-indoor-plants' ref={pipDiv}>
@@ -129,13 +173,6 @@ return (
             </div>
         ))}
         <i className="fa-solid fa-circle-arrow-right" onClick={() => pipScrollRight()}></i>
-    </div>
-
-    {/* Services We Offer */}
-    <h1 className='swo-title'>SERVICES WE OFFER</h1>
-    <div className='swo'>
-        <div className='gardening' onClick={() => alert('Gardening')}><img className='gardening-img' src='https://res.cloudinary.com/safedb/image/upload/v1678078579/KK%20Nursery/Services%20We%20Offer/Gardening_oe3vkw.jpg' alt='Gardening' /></div>
-        <div className='landscaping' onClick={() => alert('Landscaping')}><img className='landscaping-img' src='https://res.cloudinary.com/safedb/image/upload/v1678078579/KK%20Nursery/Services%20We%20Offer/Landscaping_yvfj2j.jpg' alt='Landscaping'/></div>
     </div>
 
     {/* Our Branches */}

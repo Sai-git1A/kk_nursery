@@ -26,7 +26,7 @@ export default function SWO() {
             </div>
             <div className='swo-item'>
                 <img className='swo-item-img' src='https://res.cloudinary.com/safedb/image/upload/v1691481993/KK%20Nursery/Services%20We%20Offer/Horticulture_ry7vup.jpg' alt='Landscape-Designing' loading='eager'/>
-                <h1 className='swo-item-title'>Horticulture Services</h1>
+                <h1 className='swo-item-title'>Horticulture Services</h1>
             </div>
            </div>
         </>
