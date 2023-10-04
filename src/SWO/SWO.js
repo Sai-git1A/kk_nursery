@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../Components/Nav/Navbar';
+import Footer from '../Components/Footer/Footer';
 import './SWO.css';
 
 export default function SWO() {
@@ -7,28 +8,34 @@ export default function SWO() {
     return (
         <>
            <Navbar data={cart}/>
-           <div className='swo-list'>
-            <div className='swo-item'>
-                <img className='swo-item-img' src='https://res.cloudinary.com/safedb/image/upload/v1691481994/KK%20Nursery/Services%20We%20Offer/Landscape-Designing_lid6i6.jpg' alt='Landscape-Designing' loading='eager'/>
-                <h1 className='swo-item-title'>Landscape Designing</h1>
-            </div>
-            <div className='swo-item'>
-                <img className='swo-item-img' src='https://res.cloudinary.com/safedb/image/upload/v1691481993/KK%20Nursery/Services%20We%20Offer/Gardening-Services_fuvpwj.jpg' alt='Landscape-Designing' loading='eager'/>
-                <h1 className='swo-item-title'>Gardening Services</h1>
-            </div>
-            <div className='swo-item'>
-                <img className='swo-item-img' src='https://res.cloudinary.com/safedb/image/upload/v1691481993/KK%20Nursery/Services%20We%20Offer/Planting-Services_lrpco5.jpg' alt='Landscape-Designing' loading='eager'/>
-                <h1 className='swo-item-title'> Planting Services</h1>
-            </div>
-            <div className='swo-item'>
-                <img className='swo-item-img' src='https://res.cloudinary.com/safedb/image/upload/v1691481993/KK%20Nursery/Services%20We%20Offer/Contract-Farming_tzbomr.jpg' alt='Landscape-Designing' loading='eager'/>
-                <h1 className='swo-item-title'>Contract Farming</h1>
-            </div>
-            <div className='swo-item'>
-                <img className='swo-item-img' src='https://res.cloudinary.com/safedb/image/upload/v1691481993/KK%20Nursery/Services%20We%20Offer/Horticulture_ry7vup.jpg' alt='Landscape-Designing' loading='eager'/>
-                <h1 className='swo-item-title'>Horticulture Services</h1>
-            </div>
-           </div>
+        <div className='swo-list'>
+        <div className='swo-item landscaping' onClick={() => alert('Landscaping')}>
+        <div className='swo-blank-item'>
+        <h1 className='swo-item-title'>Landscaping</h1>
+        </div>
+        </div>
+        <div className='swo-item gardening' onClick={() => alert('Gardening')}>
+        <div className='swo-blank-item'>
+        <h1 className='swo-item-title'>Gardening</h1>
+        </div>
+        </div>
+        <div className='swo-item planting' onClick={() => alert('Planting')}>
+        <div className='swo-blank-item'>
+        <h1 className='swo-item-title'>Planting</h1>
+        </div>
+        </div>
+        <div className='swo-item contract-farming' onClick={() => alert('Contract Farming')}>
+        <div className='swo-blank-item'>
+        <h1 className='swo-item-title'>Contract Farming</h1>
+        </div>
+        </div>
+        <div className='swo-item horticulture' onClick={() => alert('Horticulture')}>
+        <div className='swo-blank-item'>
+        <h1 className='swo-item-title'>Horticulture</h1>
+        </div>
+        </div>
+        </div>
+           <Footer/>
         </>
     )
 }

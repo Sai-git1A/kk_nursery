@@ -97,6 +97,14 @@ function Home () {
         browserName = 'Unknown Browser';
       }
 
+      useEffect(() => {
+        const handleScroll = () => {
+          setSwoScrollPosition(swoDiv.current.scrollLeft);
+        };
+    
+        swoDiv.current.addEventListener('scroll', handleScroll);
+      }, []);
+
     useEffect(() => {
         const handleScroll = () => {
           setPipScrollPosition(pipDiv.current.scrollLeft);
@@ -203,6 +211,9 @@ return (
 
     {/* Circular Progress */}
     {loading && <div className='circular-progress'>
+    <video autoPlay loop muted style={{width: '30%'}}>
+      <source src='https://res.cloudinary.com/kknurseries/video/upload/v1696390684/Logo/Logo_Animation.mp4' type='video/mp4'></source>
+    </video>
     <StyledCircularProgress />
     </div>}
     </>

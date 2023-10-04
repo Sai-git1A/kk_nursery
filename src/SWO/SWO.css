@@ -6,23 +6,36 @@
 }
 
 .swo-item {
-    border: 5px solid #4E944F;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid lightgrey;
     border-radius: 12px;
+    box-shadow: 4px 4px 5px lightgrey;
     box-sizing: border-box;
-    padding: 1%;
-    margin-bottom: 20px;
-    width: calc(50% - 10px);
+    margin-bottom: 1.5%;
+    width: calc(50% - 20px);
 }
 
-.swo-item-img {
+.swo-blank-item {
+    position: relative;
+    height: 250px;
     width: 100%;
 }
 
 .swo-item-title {
-    text-align: center;
+    background-color: #fff;
+    color: #4E944F;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.7;
 }
 
 @media only screen and (max-width: 680px) {
+    .swo-blank-item {
+        height: 200px;
+    }
+
     .swo-item-title {
         font-size: 1.5rem;
     }
@@ -31,8 +44,8 @@
 @media only screen and (max-width: 480px) {
     .swo-item {
         box-sizing: content-box;
+        margin-bottom: 5%;
         width: calc(90% - 10px);
-        padding: 2%;
     }
 
     .swo-item-title {
