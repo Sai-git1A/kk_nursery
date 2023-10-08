@@ -24,11 +24,15 @@
     margin-bottom: 4%;
 }
 
+.footer-follow-us a:first-child {
+    margin-left: 20px;
+}
+
 .follow-us-icons {
     color: #4E944F;
     font-size: 2rem;
     text-decoration: none;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .copyright {
