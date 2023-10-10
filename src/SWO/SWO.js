@@ -8,7 +8,7 @@ export default function SWO() {
     return (
         <>
            <Navbar data={cart}/>
-        <div className='swo-list'>
+           <div className='swo-list'>
         <div className='swo-item landscaping' onClick={() => alert('Landscaping')}>
         <div className='swo-blank-item'>
         <h1 className='swo-item-title'>Landscaping</h1>

@@ -21,7 +21,6 @@ function Home () {
     const [loading, setLoading] = useState(false);
     const [pipScrollPosition, setPipScrollPosition] = useState(0);
     const [branchScrollPosition, setBranchScrollPosition] = useState(0);
-    const swoDiv = useRef(null);
     const pipDiv = useRef(null);
     const branchDiv = useRef(null);
     let browserName;
@@ -119,7 +118,7 @@ return (
 
     {/* Services We Offer */}
     <h1 className='swo-title'>SERVICES WE OFFER</h1>
-    <div className='swo' ref={swoDiv}>
+    <div className='swo'>
         <div className='swo-list-item landscaping'>
         <div className='swo-blank'>
         <h1 className='swo-list-item-title'>Landscaping</h1>

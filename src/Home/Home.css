@@ -98,6 +98,10 @@ body {
 }
 
 .swo::-webkit-scrollbar-thumb {
+    background-color: #6bc06c;
+}
+
+.swo::-webkit-scrollbar-thumb:hover {
     background-color: #4E944F;
 }
 
