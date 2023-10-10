@@ -19,7 +19,6 @@ function Home () {
     const [pIndoorPlants, setPIndoorPlants] = useState([]);
     const [cart, setCart] = useState([]);
     const [loading, setLoading] = useState(false);
-    // const [swoScrollPosition, setSwoScrollPosition] = useState(0);
     const [pipScrollPosition, setPipScrollPosition] = useState(0);
     const [branchScrollPosition, setBranchScrollPosition] = useState(0);
     const swoDiv = useRef(null);
@@ -50,16 +49,6 @@ function Home () {
     function handelATC(key, img, title, price) {
         setCart(preval => [...preval, {key: key, imgURL: img, title: title, price: price, count:1}]);
     }
-
-  //   function swoScrollLeft() {
-  //     swoDiv.current.scrollLeft -= 200;
-  //     setSwoScrollPosition(swoDiv.current.scrollLeft);
-  // }
-  
-  // function swoScrollRight() {
-  //     swoDiv.current.scrollLeft += 200;
-  //     setSwoScrollPosition(swoDiv.current.scrollLeft);
-  // }
 
     function pipScrollLeft() {
         pipDiv.current.scrollLeft -= 200;
@@ -97,14 +86,6 @@ function Home () {
         browserName = 'Unknown Browser';
       }
 
-      // useEffect(() => {
-      //   const handleScroll = () => {
-      //     setSwoScrollPosition(swoDiv.current.scrollLeft);
-      //   };
-    
-      //   swoDiv.current.addEventListener('scroll', handleScroll);
-      // }, []);
-
     useEffect(() => {
         const handleScroll = () => {
           setPipScrollPosition(pipDiv.current.scrollLeft);
@@ -139,7 +120,6 @@ return (
     {/* Services We Offer */}
     <h1 className='swo-title'>SERVICES WE OFFER</h1>
     <div className='swo' ref={swoDiv}>
-    {/* {swoScrollPosition > 0 && <i className="fa-solid fa-circle-arrow-left" onClick={() => swoScrollLeft()}></i>} */}
         <div className='swo-list-item landscaping'>
         <div className='swo-blank'>
         <h1 className='swo-list-item-title'>Landscaping</h1>
@@ -165,7 +145,6 @@ return (
         <h1 className='swo-list-item-title'>Horticulture</h1>
         </div>
         </div>
-        {/* <i className="fa-solid fa-circle-arrow-right" onClick={() => swoScrollRight()}></i> */}
     </div>
 
     {/* Popular Indoor Plants */}

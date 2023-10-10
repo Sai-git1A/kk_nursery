@@ -3,3 +3,15 @@
     padding: 0;
     font-family: sans-serif;
 }
+
+html::-webkit-scrollbar {
+    width: 10px !important;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #4E944F;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}

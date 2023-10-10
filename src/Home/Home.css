@@ -93,33 +93,17 @@ body {
     scroll-behavior: smooth;
 }
 
-/* .swo i {
-    cursor: pointer;
-    font-size: 2.6rem;
-    line-height: 40.6px;
-    text-align: center;
-    height: 40px;
-    width: 40px;
-    background-color: black;
-    border-radius: 24px;
-    box-shadow: 2px 2px 9px black;
-    color: #fff;
-    transition: ease 0.2s;
+.swo::-webkit-scrollbar {
+    width: 10px !important;
 }
 
-.swo i:hover {
-    transform: scale(1.01);
+.swo::-webkit-scrollbar-thumb {
+    background-color: #4E944F;
 }
 
-.swo i:first-child {
-    position: absolute;
-    left: 6px;
+.swo::-webkit-scrollbar-track {
+    background-color: #ffffff;
 }
-
-.swo i:last-child {
-    position: absolute;
-    right: 6px;
-} */
 
 .swo-blank {
     position: relative;
