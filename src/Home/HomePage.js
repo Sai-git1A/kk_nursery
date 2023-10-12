@@ -5,6 +5,7 @@ import { CircularProgress, styled } from '@mui/material';
 import Navbar from '../Components/Nav/Navbar';
 import Carousel from '../Components/Carousel/Carousel';
 import Category from '../Components/Category/Category';
+import SWODetails from '../Components/SWO_Details/SWO_Details';
 import Footer from '../Components/Footer/Footer';
 import data from '../Carousel.json';
 import data2 from '../Category.json';
@@ -19,6 +20,9 @@ function Home () {
     const [pIndoorPlants, setPIndoorPlants] = useState([]);
     const [cart, setCart] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [swo, setSwo] = useState(false);
+    const [swoTitle, setSwoTitle] = useState();
+    const [swoImg, setSwoImg] = useState();
     const [pipScrollPosition, setPipScrollPosition] = useState(0);
     const [branchScrollPosition, setBranchScrollPosition] = useState(0);
     const pipDiv = useRef(null);
@@ -47,6 +51,12 @@ function Home () {
 
     function handelATC(key, img, title, price) {
         setCart(preval => [...preval, {key: key, imgURL: img, title: title, price: price, count:1}]);
+    }
+
+    function handelSWO(title, img) {
+      setSwoTitle(title);
+      setSwoImg(img)
+      setSwo(!swo);
     }
 
     function pipScrollLeft() {
@@ -119,27 +129,27 @@ return (
     {/* Services We Offer */}
     <h1 className='swo-title'>SERVICES WE OFFER</h1>
     <div className='swo'>
-        <div className='swo-list-item landscaping'>
+        <div className='swo-list-item landscaping' onClick={() => handelSWO("Landscaping", "https://res.cloudinary.com/kknurseries/image/upload/v1696083759/Services%20We%20Offer/Landscape.jpg")}>
         <div className='swo-blank'>
         <h1 className='swo-list-item-title'>Landscaping</h1>
         </div>
         </div>
-        <div className='swo-list-item gardening'>
+        <div className='swo-list-item gardening' onClick={() => handelSWO("Gardening", "https://res.cloudinary.com/kknurseries/image/upload/v1696083756/Services%20We%20Offer/Gardening.jpg")}>
         <div className='swo-blank'>
         <h1 className='swo-list-item-title'>Gardening</h1>
         </div>
         </div>
-        <div className='swo-list-item planting'>
+        <div className='swo-list-item planting' onClick={() => handelSWO("Planting", "https://res.cloudinary.com/kknurseries/image/upload/v1696083757/Services%20We%20Offer/Planting.jpg")}>
         <div className='swo-blank'>
         <h1 className='swo-list-item-title'>Planting</h1>
         </div>
         </div>
-        <div className='swo-list-item contract-farming'>
+        <div className='swo-list-item contract-farming' onClick={() => handelSWO("Contract Farming", "https://res.cloudinary.com/kknurseries/image/upload/v1696083755/Services%20We%20Offer/Contract_Farming.jpg")}>
         <div className='swo-blank'>
         <h1 className='swo-list-item-title'>Contract Farming</h1>
         </div>
         </div>
-        <div className='swo-list-item horticulture'>
+        <div className='swo-list-item horticulture' onClick={() => handelSWO("Horticulture", "https://res.cloudinary.com/kknurseries/image/upload/v1696083758/Services%20We%20Offer/Horticulture.jpg")}>
         <div className='swo-blank'>
         <h1 className='swo-list-item-title'>Horticulture</h1>
         </div>
@@ -194,6 +204,9 @@ return (
     </video>
     <StyledCircularProgress />
     </div>}
+
+    {/* SWO Details */}
+    {swo && <SWODetails onClick={() => handelSWO()} title={swoTitle} imgURL={swoImg}/>}
     </>
 );
 }
