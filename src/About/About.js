@@ -12,10 +12,10 @@ export default function About() {
         <div className='about-info-div'>
             <h1 className='about-info-title'>KK Nurseries</h1>
             <p className='about-info'>
-            Welcome to KK Nurseries, your one-stop online destination for exceptional wholesale plants. Our passion for horticulture and the vision to bring nature closer to people has made KK Nurseries a trusted institution in wholesale plant nursery services.
+            Welcome to KK Nurseries, your one-stop online destination for exceptional wholesale plants. Our passion for horticulture and the vision to bring nature closer to people has made KK Nurseries a trusted destination in wholesale plant nursery services.
             </p>
             <p className='about-info'>
-            Our journey began with a small nursery where we cultivated a diverse range of plants. Over the years, we have grown into a reliable source of high-quality, healthy plants for both individuals and businesses. We are excited to expand even further by offering our beautiful selection of plants online.
+            Our journey began at micro level where we cultivated a diverse range of plants. Over the years, we have grown into a reliable source of high-quality, healthy plants for both individuals and businesses. We are excited to expand even further by offering our beautiful selection of plants online.
             </p>
             <p className='about-info'>
             At KK Nurseries, we believe that everyone should have access to quality plants from the comfort of their own home. Our dedication to superior quality, sustainable practices, and broad variety sets us apart in the green industry. Every plant that leaves our nursery is grown with careful attention, detail, and love, ensuring they arrive at your doorstep in peak condition, ready to thrive.

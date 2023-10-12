@@ -13,6 +13,7 @@
     border-radius: 12px;
     box-shadow: 4px 4px 5px lightgrey;
     box-sizing: border-box;
+    cursor: pointer;
     margin-bottom: 1.5%;
     width: calc(50% - 20px);
 }
