@@ -1,0 +1,18 @@
+.privacy-main {
+    padding: 2%;
+}
+
+.privacy-title-div,
+.privacy-info-div,
+.privacy-note {
+    margin-bottom: 2%;
+}
+
+.privacy-title,
+.privacy-subtitle {
+    margin-bottom: 10px;
+}
+
+.privacy-info-div ul {
+    margin-left: 2%;
+}

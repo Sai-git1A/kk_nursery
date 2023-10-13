@@ -30,6 +30,10 @@ export default function Footer() {
             <Link className="follow-us-icons" to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank"><i className="fa-brands fa-twitter"></i></Link>
         </div>
         </div>
+        <div className="privacy-terms">
+            <Link className="privacy-policy" to="/privacy-policy">Privacy Policy</Link>
+            <Link className="terms-conditions" to="/terms-conditions">Terms and Conditions</Link>
+        </div>
         <div className="copyright">&#169; KK Nurseries. All rights received 2023.</div>
         </>
     )
