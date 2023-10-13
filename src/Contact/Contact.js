@@ -23,7 +23,7 @@ export default function Contact() {
         </div>
         <div className='contact-info-div'>
             <h3 className='contact-subtitle'>Visit Us</h3>
-            <span className='contact-text'>If you'd like to visit us in person, you can find us at the following location: KK Nurseries on Google Maps</span>
+            <span className='contact-text'>If you'd like to visit us in person, you can find us at the following location: KK Nurseries on Google Maps. </span>
             <span>https://maps.app.goo.gl/eSr3BLK5GtbpRZWW7</span>
         </div>
         <div className='contact-info-div'>
