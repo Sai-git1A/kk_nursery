@@ -7,6 +7,9 @@ import SWO from './SWO/SWO';
 import About from './About/About';
 import Privacy from './PrivacyPolicy/Privacy';
 import Terms from './TermsConditions/Terms';
+import Shipping from './Shipping/Shipping';
+import Cancellation from './Cancellation/Cancellation';
+import Contact from './Contact/Contact';
 
 
 
@@ -21,6 +24,9 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/privacy-policy' element={<Privacy />} />
         <Route path='/terms-conditions' element={<Terms />} />
+        <Route path='/shipping-delivery' element={<Shipping />} />
+        <Route path='/cancellation-refund' element={<Cancellation />} />
+        <Route path='/contact-us' element={<Contact />} />
       </Routes>
     </Router>
   );

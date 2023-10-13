@@ -33,6 +33,8 @@ export default function Footer() {
         <div className="privacy-terms">
             <Link className="privacy-policy" to="/privacy-policy">Privacy Policy</Link>
             <Link className="terms-conditions" to="/terms-conditions">Terms and Conditions</Link>
+            <Link className="shipping-delivery" to="/shipping-delivery">Shipping</Link>
+            <Link className="cancellation-refund" to="/cancellation-refund">Cancellation</Link>
         </div>
         <div className="copyright">&#169; KK Nurseries. All rights received 2023.</div>
         </>

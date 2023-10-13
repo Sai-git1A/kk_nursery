@@ -108,7 +108,7 @@ export default function Navbar(props) {
             <Link className='nav-link testimonials' to='/testimonials'><span>Testimonials</span></Link>
             </div>
             <div className='nav-links-div'>
-            <Link className='nav-link contact-us' onClick={() => handelContactUs()}><span>Contact Us</span></Link>
+            <Link className='nav-link contact-us' to='/contact-us'><span>Contact Us</span></Link>
             </div>
         </div>
 

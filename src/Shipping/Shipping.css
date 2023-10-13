@@ -1,24 +1,24 @@
-.privacy-main {
+.shipping-main {
     padding: 2%;
 }
 
-.privacy-title-div,
-.privacy-info-div,
-.privacy-note {
+.shipping-title-div,
+.shipping-info-div,
+.shipping-note {
     margin-bottom: 2%;
 }
 
-.privacy-title,
-.privacy-subtitle {
+.shipping-title,
+.shipping-subtitle {
     margin-bottom: 10px;
 }
 
-.privacy-info-div ul {
+.shipping-info-div ul {
     margin-left: 2%;
 }
 
 @media only screen and (max-width: 680px) {
-    .privacy-info-div ul {
+    .shipping-info-div ul {
         margin-left: 5%;
     }
 }

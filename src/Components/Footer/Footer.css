@@ -43,7 +43,9 @@
 }
 
 .privacy-policy,
-.terms-conditions {
+.terms-conditions,
+.shipping-delivery,
+.cancellation-refund {
     color: grey !important;
     font-size: 1rem !important;
     margin-left: 10px;
@@ -65,5 +67,9 @@
     .footer-contact-us,
     .footer-follow-us {
         margin-bottom: 4%;
+    }
+
+    .privacy-terms {
+        flex-wrap: wrap;
     }
 }

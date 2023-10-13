@@ -1,24 +1,24 @@
-.privacy-main {
+.contact-main {
     padding: 2%;
 }
 
-.privacy-title-div,
-.privacy-info-div,
-.privacy-note {
+.contact-title-div,
+.contact-info-div,
+.contact-note {
     margin-bottom: 2%;
 }
 
-.privacy-title,
-.privacy-subtitle {
+.contact-title,
+.contact-subtitle {
     margin-bottom: 10px;
 }
 
-.privacy-info-div ul {
+.contact-info-div ul {
     margin-left: 2%;
 }
 
 @media only screen and (max-width: 680px) {
-    .privacy-info-div ul {
+    .contact-info-div ul {
         margin-left: 5%;
     }
 }

@@ -1,0 +1,32 @@
+.cancellation-main {
+    padding: 2%;
+}
+
+.cancellation-title-div,
+.cancellation-info-div,
+.cancellation-note {
+    margin-bottom: 2%;
+}
+
+.cancellation-title,
+.cancellation-subtitle {
+    margin-bottom: 10px;
+}
+
+.cancellation-info-div ul {
+    margin-left: 2%;
+}
+
+.cancellation-info-div ol {
+    margin-left: 2%;
+}
+
+@media only screen and (max-width: 680px) {
+    .cancellation-info-div ul {
+        margin-left: 5%;
+    }
+
+    .cancellation-info-div ol {
+        margin-left: 5%;
+    }
+}

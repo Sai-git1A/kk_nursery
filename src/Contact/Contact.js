@@ -1,0 +1,52 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Footer from '../Components/Footer/Footer';
+import './Contact.css';
+
+export default function Contact() {
+    return (
+        <>
+        <div className='contact-main'>
+        <div className='contact-title-div'>
+            <h1 className='contact-title'>Contact Us</h1>
+        </div>
+        <div className='contact-info-div'>
+            <h3 className='contact-subtitle'>Contact Information</h3>
+            <ul>
+                <li>Phone: +91 7386722020</li>
+                <li>Email: kknurseries.official@gmail.com</li>
+            </ul>
+        </div>
+        <div className='contact-info-div'>
+            <h3 className='contact-subtitle'>Operating Hours</h3>
+            <span className='contact-text'>We're available to assist you from 8:00 AM to 8:00 PM every day of the week.</span>
+        </div>
+        <div className='contact-info-div'>
+            <h3 className='contact-subtitle'>Visit Us</h3>
+            <span className='contact-text'>If you'd like to visit us in person, you can find us at the following location: KK Nurseries on Google Maps</span>
+            <span>https://maps.app.goo.gl/eSr3BLK5GtbpRZWW7</span>
+        </div>
+        <div className='contact-info-div'>
+            <h3 className='contact-subtitle'>Connect With Us</h3>
+            <span className='contact-text'>Stay updated with our latest news and offers by connecting with us on social media platforms:</span>
+            <ul>
+                <li><Link  to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank">Youtube</Link></li>
+                <li><Link  to="https://api.whatsapp.com/send/?phone=%2B917386722020&text&type=phone_number&app_absent=0" target="_blank">Whatsapp</Link></li>
+                <li><Link  to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank">Instagram</Link></li>
+                <li><Link  to="https://www.youtube.com/channel/UC3FvjGj2LVNb5sg9MUHMfYw" target="_blank">Twitter</Link></li>
+            </ul>
+        </div>
+        <div className='contact-info-div'>
+            <h3 className='contact-subtitle'>Have Questions?</h3>
+            <span className='contact-text'>If you have any questions or need assistance, please don't hesitate to reach out. We're here to help.</span>
+        </div>
+        <div className='contact-info-div'>
+            <h3 className='contact-subtitle'>Feedback</h3>
+            <span className='contact-text'>We value your feedback and encourage you to share your experiences with us on social media or via email. Your comments and suggestions help us serve you better.</span>
+        </div>
+        <p className='contact-note'>Thank you for choosing KK Nurseries!</p>
+        </div>
+        <Footer />
+        </>
+    )
+}
