@@ -1,0 +1,14 @@
+.terms-main {
+    padding: 2%;
+}
+
+.terms-title-div,
+.terms-info-div,
+.terms-note {
+    margin-bottom: 2%;
+}
+
+.terms-title,
+.terms-subtitle {
+    margin-bottom: 10px;
+}
