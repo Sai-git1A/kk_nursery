@@ -1,10 +1,13 @@
 import React from 'react';
+import Navbar from '../Components/Nav/Navbar';
 import Footer from '../Components/Footer/Footer';
 import './Privacy.css';
 
 export default function Privacy() {
+    const cart = {}
     return (
         <>
+        <Navbar data={cart}/>
         <div className='privacy-main'>
         <div className='privacy-title-div'>
             <h1 className='privacy-title'>Privacy Policy</h1>

@@ -1,10 +1,13 @@
 import React from 'react';
+import Navbar from '../Components/Nav/Navbar';
 import Footer from '../Components/Footer/Footer';
 import './Cancellation.css';
 
 export default function cancellation() {
+    const cart = {}
     return (
         <>
+        <Navbar data={cart}/>
         <div className='cancellation-main'>
         <div className='cancellation-title-div'>
             <h1 className='cancellation-title'>Cancellation and Refund</h1>

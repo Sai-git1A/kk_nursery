@@ -1,11 +1,21 @@
 .shipping-main {
     padding: 2%;
+    text-align: justify;
 }
 
 .shipping-title-div,
 .shipping-info-div,
 .shipping-note {
     margin-bottom: 2%;
+}
+
+.shipping-title {
+    color: #4E944F;
+    text-align: center;
+}
+
+.shipping-subtitle {
+    color: grey;
 }
 
 .shipping-title,

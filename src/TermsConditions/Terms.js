@@ -1,10 +1,13 @@
 import React from 'react';
+import Navbar from '../Components/Nav/Navbar';
 import Footer from '../Components/Footer/Footer';
 import './Terms.css'
 
 export default function Terms() {
+    const cart = {}
     return (
         <>
+        <Navbar data={cart}/>
         <div className='terms-main'>
         <div className='terms-title-div'>
             <h1 className='terms-title'>Terms and Conditions</h1>

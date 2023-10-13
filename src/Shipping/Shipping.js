@@ -1,10 +1,13 @@
 import React from 'react';
+import Navbar from '../Components/Nav/Navbar';
 import Footer from '../Components/Footer/Footer';
 import './Shipping.css';
 
 export default function Shipping() {
+    const cart = {}
     return (
         <>
+        <Navbar data={cart}/>
         <div className='shipping-main'>
         <div className='shipping-title-div'>
             <h1 className='shipping-title'>Shipping and Delivery</h1>

@@ -1,11 +1,21 @@
 .cancellation-main {
     padding: 2%;
+    text-align: justify;
 }
 
 .cancellation-title-div,
 .cancellation-info-div,
 .cancellation-note {
     margin-bottom: 2%;
+}
+
+.cancellation-title {
+    color: #4E944F;
+    text-align: center;
+}
+
+.cancellation-subtitle {
+    color: grey;
 }
 
 .cancellation-title,

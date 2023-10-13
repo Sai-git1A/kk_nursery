@@ -1,5 +1,6 @@
 .contact-main {
     padding: 2%;
+    text-align: justify;
 }
 
 .contact-title-div,
@@ -8,9 +9,24 @@
     margin-bottom: 2%;
 }
 
+.contact-title {
+    color: #4E944F;
+    text-align: center;
+}
+
+.contact-subtitle {
+    color: grey;
+}
+
 .contact-title,
 .contact-subtitle {
     margin-bottom: 10px;
+}
+
+.contact-branch {
+    border: none;
+    height: 250px;
+    width: 96dvw;
 }
 
 .contact-info-div ul {

@@ -1,11 +1,21 @@
 .terms-main {
     padding: 2%;
+    text-align: justify;
 }
 
 .terms-title-div,
 .terms-info-div,
 .terms-note {
     margin-bottom: 2%;
+}
+
+.terms-title {
+    color: #4E944F;
+    text-align: center;
+}
+
+.terms-subtitle {
+    color: grey;
 }
 
 .terms-title,

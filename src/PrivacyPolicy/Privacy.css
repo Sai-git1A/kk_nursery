@@ -1,11 +1,21 @@
 .privacy-main {
     padding: 2%;
+    text-align: justify;
 }
 
 .privacy-title-div,
 .privacy-info-div,
 .privacy-note {
     margin-bottom: 2%;
+}
+
+.privacy-title {
+    color: #4E944F;
+    text-align: center;
+}
+
+.privacy-subtitle {
+    color: grey;
 }
 
 .privacy-title,
