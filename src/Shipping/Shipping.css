@@ -14,17 +14,27 @@
     text-align: center;
 }
 
-.shipping-subtitle {
-    color: grey;
-}
-
 .shipping-title,
 .shipping-subtitle {
     margin-bottom: 10px;
 }
 
+.shipping-text {
+    color: grey;
+}
+
+.shipping-text,
+.shipping-note {
+    font-family: kalam;
+}
+
 .shipping-info-div ul {
     margin-left: 2%;
+}
+
+.shipping-info-div li {
+    color: grey;
+    font-family: kalam;
 }
 
 @media only screen and (max-width: 680px) {

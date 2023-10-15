@@ -14,13 +14,23 @@
     text-align: center;
 }
 
-.cancellation-subtitle {
-    color: grey;
-}
-
 .cancellation-title,
 .cancellation-subtitle {
     margin-bottom: 10px;
+}
+
+.cancellation-text {
+    color: grey;
+}
+
+.cancellation-text,
+.cancellation-note {
+    font-family: kalam;
+}
+
+.cancellation-info-div li {
+    color: grey;
+    font-family: kalam;
 }
 
 .cancellation-info-div ul {

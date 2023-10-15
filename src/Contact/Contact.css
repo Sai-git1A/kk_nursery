@@ -14,13 +14,18 @@
     text-align: center;
 }
 
-.contact-subtitle {
-    color: grey;
-}
-
 .contact-title,
 .contact-subtitle {
     margin-bottom: 10px;
+}
+
+.contact-text {
+    color: grey;
+}
+
+.contact-text,
+.contact-note {
+    font-family: kalam;
 }
 
 .contact-branch {
@@ -31,6 +36,11 @@
 
 .contact-info-div ul {
     margin-left: 2%;
+}
+
+.contact-info-div li {
+    color: grey;
+    font-family: kalam;
 }
 
 @media only screen and (max-width: 680px) {

@@ -14,11 +14,17 @@
     text-align: center;
 }
 
-.terms-subtitle {
-    color: grey;
-}
-
 .terms-title,
 .terms-subtitle {
     margin-bottom: 10px;
+}
+
+.terms-text {
+    color: grey;
+}
+
+.terms-date,
+.terms-text,
+.terms-note {
+    font-family: kalam;
 }

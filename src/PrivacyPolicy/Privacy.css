@@ -6,7 +6,7 @@
 .privacy-title-div,
 .privacy-info-div,
 .privacy-note {
-    margin-bottom: 2%;
+    margin-bottom: 10px;
 }
 
 .privacy-title {
@@ -14,17 +14,28 @@
     text-align: center;
 }
 
-.privacy-subtitle {
-    color: grey;
-}
-
 .privacy-title,
 .privacy-subtitle {
     margin-bottom: 10px;
 }
 
+.privacy-text {
+    color: grey;
+}
+
+.privacy-date,
+.privacy-text,
+.privacy-note {
+    font-family: kalam;
+}
+
 .privacy-info-div ul {
     margin-left: 2%;
+}
+
+.privacy-info-div li {
+    color: grey;
+    font-family: kalam;
 }
 
 @media only screen and (max-width: 680px) {
