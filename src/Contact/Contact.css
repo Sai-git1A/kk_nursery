@@ -11,7 +11,12 @@
 
 .contact-title {
     color: #4E944F;
+    font-family: kalam;
     text-align: center;
+}
+
+.contact-subtitle {
+    font-size: 0.9rem;
 }
 
 .contact-title,
@@ -25,7 +30,7 @@
 
 .contact-text,
 .contact-note {
-    font-family: kalam;
+    font-size: 0.8rem;
 }
 
 .contact-branch {
@@ -40,7 +45,7 @@
 
 .contact-info-div li {
     color: grey;
-    font-family: kalam;
+    font-size: 0.8rem;
 }
 
 @media only screen and (max-width: 680px) {

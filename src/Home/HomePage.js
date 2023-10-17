@@ -181,7 +181,7 @@ return (
         </div>
         <div className='branch'>
             <span className='branch-title'>RTC Bus Stop, Guntakal Branch</span>
-            <iframe className='branch-location' title='branch-2' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d348.8723047071379!2d77.37955354941225!3d15.161544297702294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb6ef17edb97a91%3A0x5cd69c67e75c239a!2sSRIKRISHNA%20KUMARI%20PLANT&#39;S%20NURSERY%2CAPSRTC%20Bus%20Stand%2CGUNTAKAL!5e0!3m2!1sen!2sin!4v1680772202434!5m2!1sen!2sin"></iframe>
+            <iframe className='branch-location' title='branch-2' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123227.49713888792!2d77.23278804335942!3d15.166070599999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb6e535538b672b%3A0xb512d6f93afbf4c4!2sKK%20Nurseries!5e0!3m2!1sen!2sin!4v1697515689248!5m2!1sen!2sin"></iframe>
         </div>
         <div className='branch'>
             <span className='branch-title'>SBI Main, Guntakal Branch</span>

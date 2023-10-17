@@ -11,7 +11,12 @@
 
 .terms-title {
     color: #4E944F;
+    font-family: kalam;
     text-align: center;
+}
+
+.terms-subtitle {
+    font-size: 0.9rem;
 }
 
 .terms-title,
@@ -26,5 +31,5 @@
 .terms-date,
 .terms-text,
 .terms-note {
-    font-family: kalam;
+    font-size: 0.8rem;
 }
