@@ -1,28 +1,23 @@
 [
     {
       "id":"1",
-      "imgURL":"https://res.cloudinary.com/safedb/image/upload/v1677909324/KK%20Nursery/Catogery/Indoor_Plants_t9orzj.png",
-      "title":"INDOOR PLANTS"
+      "imgURL":"https://res.cloudinary.com/kknurseries/image/upload/v1697688717/Categories/Indoor_Plants.jpg",
+      "title":"Indoor Plants"
     },
     {
       "id":"2",
-      "imgURL":"https://res.cloudinary.com/safedb/image/upload/v1677909324/KK%20Nursery/Catogery/Outdoor_Plants_lckmk7.png",
-      "title":"OUTDOOR PLANTS"
+      "imgURL":"https://res.cloudinary.com/kknurseries/image/upload/v1697689253/Categories/Succulents.jpg",
+      "title":"Succulents"
     },
     {
       "id":"3",
-      "imgURL":"https://res.cloudinary.com/safedb/image/upload/v1677909325/KK%20Nursery/Catogery/Succulents_jjetyg.png",
-      "title":"SUCCULENTS"
+      "imgURL":"https://res.cloudinary.com/kknurseries/image/upload/v1697688717/Categories/Flowering_Plants.jpg",
+      "title":"Flowering Plants"
     },
     {
       "id":"4",
-      "imgURL":"https://res.cloudinary.com/safedb/image/upload/v1677909325/KK%20Nursery/Catogery/Flowering_Plants_ml0kl1.png",
-      "title":"FLOWERING PLANTS"
-    },
-    {
-      "id":"5",
-      "imgURL":"https://res.cloudinary.com/safedb/image/upload/v1677909324/KK%20Nursery/Catogery/Planting_Pots_cen245.png",
-      "title":"PLANTING POTS"
+      "imgURL":"https://res.cloudinary.com/kknurseries/image/upload/v1697688717/Categories/Plant_Supplies.jpg",
+      "title":"Planting Supplies"
     }
   ]
   

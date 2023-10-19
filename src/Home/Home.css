@@ -123,6 +123,7 @@ body {
     border-radius: 12px;
     box-shadow: 4px 4px 5px lightgrey;
     margin-left: 1.5%;
+    cursor: pointer;
 }
 
 .swo-list-item-title {
@@ -130,7 +131,6 @@ body {
     color: #4E944F !important;
     position: absolute;
     bottom: 0;
-    opacity: 0.7;
 }
 
 .landscaping {
@@ -231,10 +231,6 @@ body {
 }
 
 @media only screen and (max-width: 1000px) {
-    /* .swo i {
-        display: none;
-    } */
-
     .swo::-webkit-scrollbar {
         display: none;
     }
@@ -261,7 +257,8 @@ body {
 
     .pip-title, 
     .swo-title, 
-    .our-branches-title {
+    .our-branches-title,
+    .swo-list-item-title {
         font-size: 1.5rem;
     }
 }
