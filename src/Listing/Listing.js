@@ -95,10 +95,10 @@ export default function Listing() {
     return (
         <>
         <Navbar data={cart} />
-        <div className="category">
+        <div className="listing-category">
         {category.length > 0 && category.map(item => (
-            <div className="category-item" key={item._id} onClick={() => handelClick(item.title)} style={{backgroundColor: item.title.toLowerCase() === param.name? '#fff':'#E9EFC0'}}>
-                <span className="listing-category-name"style={{color: item.title.toLowerCase() === param.name? '#4E944F':'#000000'}}>{item.title}</span>
+            <div className="listing-category-item" key={item._id} onClick={() => handelClick(item.title)} style={{backgroundColor: item.title.toLowerCase() === param.name? '#fff':'#4E944F'}}>
+                <span className="listing-category-name"style={{color: item.title.toLowerCase() === param.name? '#4E944F':'#fff'}}>{item.title}</span>
             </div>
         ))}
         </div>

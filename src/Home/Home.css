@@ -88,7 +88,7 @@ body {
     align-items: center;
     overflow-y: scroll;
     margin-bottom: 3%;
-    padding: 1%;
+    padding: 2% 0;
     white-space: nowrap;
     scroll-behavior: smooth;
 }
