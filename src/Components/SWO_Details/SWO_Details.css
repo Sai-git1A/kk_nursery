@@ -15,9 +15,9 @@
 
 .swo-details-info {
     background-color: #fff;
-    border-top: 2px solid lightgrey;
-    border-left: 2px solid lightgrey;
-    border-right: 2px solid lightgrey;
+    border-top: 2px solid #4E944F;
+    border-left: 2px solid #4E944F;
+    border-right: 2px solid #4E944F;
     border-radius: 12px 12px 0 0 !important;
     overflow: scroll;
     white-space: nowrap;
@@ -42,9 +42,9 @@
 
 .swo-details-button {
     background-color: #4E944F;
-    border-left: 2px solid lightgrey;
-    border-right: 2px solid lightgrey;
-    border-bottom: 2px solid lightgrey;
+    border-left: 2px solid #4E944F;
+    border-right: 2px solid #4E944F;
+    border-bottom: 2px solid #4E944F;
     border-radius: 0 0 12px 12px !important;
     cursor: pointer;
     padding: 1% 0;

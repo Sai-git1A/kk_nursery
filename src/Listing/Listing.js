@@ -116,7 +116,7 @@ export default function Listing() {
             <StyledCircularProgress />
             </div>}
             {list.length > 0 && list.map(item => (
-                <div className="list-item" key={item.id}>
+                <div className="list-item" key={item.title}>
                     <img className="list-item-img" src={item.imgURL} onClick={() => handelItemClick(item.title, item.imgURL, item.price)} loading="eager" alt={item.title}/>
                     <span className="list-item-name">{item.title}</span>
                     <span className="list-item-price">₹{item.price}</span>

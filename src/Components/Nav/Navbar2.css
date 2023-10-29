@@ -68,7 +68,7 @@
     }
 
     body .nav-links-menu {
-        border-right: 2px solid lightgrey;
+        border-right: 2px solid #4E944F;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
@@ -86,7 +86,7 @@
     }
 
     body .nav-links-div {
-        border-bottom: 2px solid lightgrey;
+        border-bottom: 2px solid #4E944F;
         margin-bottom: 12%;
         width: 100%;
     }
@@ -97,7 +97,7 @@
     }
 
     body .profile:hover + .profile-items, .profile-items:hover {
-        border-top: 2px solid lightgrey;
+        border-top: 2px solid #4E944F;
         border-left: none;
         position: absolute;
         top: 0;

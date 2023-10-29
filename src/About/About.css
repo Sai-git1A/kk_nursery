@@ -6,7 +6,7 @@
 
 .about-logo-div {
     background-color: #fff;
-    border: 5px solid #4E944F;
+    border: 3px solid #4E944F;
     border-radius: 50%;
     position: absolute;
     padding: 15px;
@@ -20,7 +20,7 @@
 }
 
 .about-info-div {
-    border: 5px solid #4E944F;
+    border: 3px solid #4E944F;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
