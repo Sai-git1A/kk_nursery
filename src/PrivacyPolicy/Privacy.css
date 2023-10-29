@@ -11,7 +11,6 @@
 
 .privacy-title {
     color: #4E944F;
-    font-family: kalam;
     text-align: center;
 }
 
@@ -20,18 +19,8 @@
     margin-bottom: 10px;
 }
 
-.privacy-subtitle {
-    font-size: 0.9rem;
-}
-
 .privacy-text {
     color: grey;
-}
-
-.privacy-date,
-.privacy-text,
-.privacy-note {
-    font-size: 0.8rem;
 }
 
 .privacy-info-div ul {
@@ -40,11 +29,28 @@
 
 .privacy-info-div li {
     color: grey;
-    font-size: 0.8rem;
 }
 
 @media only screen and (max-width: 680px) {
+    .privacy-title {
+        font-size: 1.2rem;
+    }
+
+    .privacy-subtitle {
+        font-size: 1rem;
+    }
+
+    .privacy-date,
+    .privacy-text,
+    .privacy-note {
+        font-size: 0.9rem;
+    }
+
     .privacy-info-div ul {
         margin-left: 5%;
+    }
+
+    .privacy-info-div li {
+        font-size: 0.9rem;
     }
 }

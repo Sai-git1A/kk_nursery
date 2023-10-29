@@ -1,7 +1,3 @@
-body {
-    font-family: sans-serif;
-}
-
 .popular-indoor-plants {
     display: flex;
     align-items: center;
@@ -256,24 +252,20 @@ body {
     }
 
     .pip-title, 
-    .swo-title, 
-    .our-branches-title,
-    .swo-list-item-title {
-        font-size: 1.5rem;
+    .swo-title,
+    .our-branches-title {
+        font-size: 1.2rem;
+    }
+
+    .swo-list-item-title,
+    .branch-title {
+        font-size: 1.1rem;
     }
 }
 
 @media only screen and (max-width: 480px) {
     .swo-list-item {
         width: 95dvw;
-    }
-
-    .landscaping,
-    .gardening,
-    .planting,
-    .contract-farming,
-    .horticulture {
-        margin-left: 2%;
     }
 
     .branch {

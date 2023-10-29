@@ -1,6 +1,6 @@
 .listing-category {
     display: flex;
-    margin-top: 0.5%;
+    margin-top: 3%;
     overflow: scroll;
     white-space: nowrap;
 }
@@ -10,7 +10,7 @@
 }
 
 .listing-category-item {
-    border-radius: 12px;
+    border-radius: 5px;
     margin-left: 1.5%;
     padding: 1%;
 }
@@ -99,13 +99,13 @@
 }
 
 @media only screen and (max-width: 680px) {
-    .category {
+    .listing-category {
         overflow: scroll;
         white-space: nowrap;
     }
 
     .listing-category-name {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .list-item {

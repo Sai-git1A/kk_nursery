@@ -1,6 +1,5 @@
 .contact-main {
     padding: 2%;
-    text-align: justify;
 }
 
 .contact-title-div,
@@ -11,12 +10,7 @@
 
 .contact-title {
     color: #4E944F;
-    font-family: kalam;
     text-align: center;
-}
-
-.contact-subtitle {
-    font-size: 0.9rem;
 }
 
 .contact-title,
@@ -26,11 +20,6 @@
 
 .contact-text {
     color: grey;
-}
-
-.contact-text,
-.contact-note {
-    font-size: 0.8rem;
 }
 
 .contact-branch {
@@ -45,11 +34,28 @@
 
 .contact-info-div li {
     color: grey;
-    font-size: 0.8rem;
 }
 
 @media only screen and (max-width: 680px) {
+    .contact-title {
+        font-size: 1.2rem;
+    }
+
+    .contact-subtitle {
+        font-size: 1rem;
+    }
+
+    .contact-date,
+    .contact-text,
+    .contact-note {
+        font-size: 0.9rem;
+    }
+    
     .contact-info-div ul {
         margin-left: 5%;
+    }
+
+    .contact-info-div li {
+        font-size: 0.9rem;
     }
 }

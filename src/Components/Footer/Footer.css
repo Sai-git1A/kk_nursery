@@ -69,6 +69,11 @@
         margin-bottom: 4%;
     }
 
+    .footer-about-us-title,
+    .footer-contact-us-title {
+        font-size: 1.3rem;
+    }
+
     .privacy-terms {
         flex-wrap: wrap;
     }

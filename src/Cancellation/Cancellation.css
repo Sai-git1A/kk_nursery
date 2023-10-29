@@ -11,12 +11,7 @@
 
 .cancellation-title {
     color: #4E944F;
-    font-family: kalam;
     text-align: center;
-}
-
-.cancellation-subtitle {
-    font-size: 0.9rem;
 }
 
 .cancellation-title,
@@ -28,14 +23,8 @@
     color: grey;
 }
 
-.cancellation-text,
-.cancellation-note {
-    font-size: 0.8rem;
-}
-
 .cancellation-info-div li {
     color: grey;
-    font-size: 0.8rem;
 }
 
 .cancellation-info-div ul {
@@ -47,8 +36,26 @@
 }
 
 @media only screen and (max-width: 680px) {
+    .cancellation-title {
+        font-size: 1.2rem;
+    }
+
+    .cancellation-subtitle {
+        font-size: 1rem;
+    }
+
+    .cancellation-date,
+    .cancellation-text,
+    .cancellation-note {
+        font-size: 0.9rem;
+    }
+
     .cancellation-info-div ul {
         margin-left: 5%;
+    }
+
+    .cancellation-info-div li {
+        font-size: 0.9rem;
     }
 
     .cancellation-info-div ol {

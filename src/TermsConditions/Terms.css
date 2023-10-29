@@ -11,12 +11,7 @@
 
 .terms-title {
     color: #4E944F;
-    font-family: kalam;
     text-align: center;
-}
-
-.terms-subtitle {
-    font-size: 0.9rem;
 }
 
 .terms-title,
@@ -28,8 +23,18 @@
     color: grey;
 }
 
-.terms-date,
-.terms-text,
-.terms-note {
-    font-size: 0.8rem;
+@media only screen and (max-width: 680px) {
+    .terms-title {
+        font-size: 1.2rem;
+    }
+
+    .terms-subtitle {
+        font-size: 1rem;
+    }
+
+    .terms-date,
+    .terms-text,
+    .terms-note {
+        font-size: 0.9rem;
+    }
 }
