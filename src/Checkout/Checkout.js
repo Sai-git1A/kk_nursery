@@ -72,7 +72,7 @@ export default function Checkout() {
         </div>
         <div className="checkout-user-details">
             <h1 className="checkout-title">User Details</h1>
-            <div className="user-box"><input className="user-details" type="text" value={user.name} name="name" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value, price:cart.reduce((a, b) => a + b.price * b.count, 0) + 89 * 100}))} placeholder="Name" /></div>
+            <div className="user-box"><input className="user-details" type="text" value={user.name} name="name" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value, price:cart.reduce((a, b) => a + b.price * b.count, 0) + 89 * 1000}))} placeholder="Name" /></div>
             <div className="user-box"><input className="user-details" type="email" value={user.email} name="email" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value}))} placeholder="Email" /></div>
             <div className="user-box"><input className="user-details" type="tel" value={user.phone} name="phone" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value}))} placeholder="Phone" /></div>
             <div className="user-box"><textarea className="user-details" type="text" value={user.address} name="address" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value}))} placeholder="Address" rows="10" cols="50" /></div>
