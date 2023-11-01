@@ -10,7 +10,7 @@ import Terms from './TermsConditions/Terms';
 import Shipping from './Shipping/Shipping';
 import Cancellation from './Cancellation/Cancellation';
 import Contact from './Contact/Contact';
-
+import Checkout from './Checkout/Checkout';
 
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
         <Route path='/shipping-delivery' element={<Shipping />} />
         <Route path='/cancellation-refund' element={<Cancellation />} />
         <Route path='/contact-us' element={<Contact />} />
+        <Route path='/checkout' element={<Checkout />} />
       </Routes>
     </Router>
   );

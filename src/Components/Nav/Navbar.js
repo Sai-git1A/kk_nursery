@@ -141,7 +141,7 @@ export default function Navbar(props) {
             </div>)}
             </div>
             <div className='cart-footer'>
-                <button className='cart-btn checkout'>CHECKOUT</button>
+                <button className='cart-btn checkout' onClick={() => navigate('/checkout')}>CHECKOUT</button>
             </div>
         </div>}
         </>
