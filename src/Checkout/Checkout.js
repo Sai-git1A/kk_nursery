@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-// import { CircularProgress, styled } from '@mui/material';
 import Navbar from "../Components/Nav/Navbar";
 import Footer from "../Components/Footer/Footer";
 import './Checkout.css';
 
 export default function Checkout() {
     const cart = JSON.parse(localStorage.getItem('cart')) || []
+    const total = cart.reduce((a, b) => a + b.price * b.count, 0) + 80
     const [check, setCheck] = useState(false)
     const [user, setUser] = useState({
         name: '',
@@ -15,13 +15,9 @@ export default function Checkout() {
         address: '',
         price: 0
     });
-    const [payURL, setPayURL] = useState('');
+    const [payData, setPayData] = useState();
     const date = new Date();
     const orderID = 'KK' + date.getDate() + Number(date.getMonth() + 1) + date.getFullYear() + date.getHours();
-
-    // const StyledCircularProgress = styled(CircularProgress) ({
-    //     color: '#4E944F'
-    // });
 
     function handelOrder() {
         if (check) {
@@ -35,7 +31,7 @@ export default function Checkout() {
                 body: JSON.stringify(user)
             })
             .then(res => res.json())
-            .then(data => setPayURL(data.getURL))
+            .then(data => setPayData(data))
         } else {
             alert('Please check the terms and conditions')
         }
@@ -66,13 +62,13 @@ export default function Checkout() {
             </div>}
             <div className="checkout-total">
                 <p>Total: ₹{cart.reduce((a, b) => a + b.price * b.count, 0)}</p>
-                <p>Delivery Charge: ₹89</p>
-                <p>Total Payable: ₹{cart.reduce((a, b) => a + b.price * b.count, 0) + 89}</p>
+                <p>Delivery Charge: ₹80</p>
+                <p>Total Payable: ₹{total}</p>
             </div>
         </div>
         <div className="checkout-user-details">
             <h1 className="checkout-title">User Details</h1>
-            <div className="user-box"><input className="user-details" type="text" value={user.name} name="name" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value, price:cart.reduce((a, b) => a + b.price * b.count, 0) + 89 * 1000}))} placeholder="Name" /></div>
+            <div className="user-box"><input className="user-details" type="text" value={user.name} name="name" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value, price: total * 100}))} placeholder="Name" /></div>
             <div className="user-box"><input className="user-details" type="email" value={user.email} name="email" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value}))} placeholder="Email" /></div>
             <div className="user-box"><input className="user-details" type="tel" value={user.phone} name="phone" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value}))} placeholder="Phone" /></div>
             <div className="user-box"><textarea className="user-details" type="text" value={user.address} name="address" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value}))} placeholder="Address" rows="10" cols="50" /></div>
@@ -80,10 +76,11 @@ export default function Checkout() {
             <button className="btn-place-order" onClick={() => handelOrder()}>Place Order</button>
         </div>
         </div>
-        {payURL && <div className="pay-div">
-            <h3 className="pay-now-title">Order Initiated</h3>
-            {/* <StyledCircularProgress /> */}
-            <Link className="pay-now" to={payURL}>Pay Now</Link>
+        {payData && <div className="pay-div-main">
+            <div className="pay-div">
+            <h3 className="pay-now-title">{payData.result.message}</h3>
+            <Link className="pay-now" to={payData.result.data.instrumentResponse.redirectInfo.url}>Pay Now</Link>
+            </div>
         </div>}
         <Footer />
         </>

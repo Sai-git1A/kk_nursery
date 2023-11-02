@@ -1,7 +1,6 @@
 .checkout-main {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     margin: 2% 0;
 }
 
@@ -53,16 +52,27 @@
     border: none;
 }
 
+.pay-div-main {
+    background-color: transparent !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    width: 100dvw;
+    z-index: 1;
+}
+
 .pay-div {
     background-color: #fff;
     border: 2px solid #4E944F;
-    position: absolute;
-    top: calc(100dvh/2);
-    left: calc(100dvw/2.5);
+    border-radius: 12px;
     padding: 1%;
-    text-align: center;
-    width: 20dvw;
-    z-index: 1;
+    width: 50dvw;
 }
 
 .pay-now-title {
@@ -72,4 +82,26 @@
 .pay-now {
     color: #4E944F;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 680px) {
+    .checkout-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .checkout-main p {
+        font-size: 0.9rem;
+    }
+
+    .checkout-user-details,
+    .checkout-order-details {
+        padding: 0;
+        margin-bottom: 2%;
+        width: 90%;
+    }
+
+    .checkout-title {
+        font-size: 1.2rem;
+    }
 }

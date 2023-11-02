@@ -26,7 +26,7 @@ export default function Shipping() {
         <div className='shipping-info-div'>
             <h3 className='shipping-subtitle'>Shipping Fees</h3>
             <ul>
-                <li>For standard shipping, there is a flat fee of ₹79.</li>
+                <li>For standard shipping, there is a flat fee of ₹80.</li>
                 <li>Enjoy free shipping on all orders above ₹2,499.</li>
             </ul>
         </div>
