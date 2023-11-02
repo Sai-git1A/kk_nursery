@@ -7,17 +7,18 @@ import './Checkout.css';
 export default function Checkout() {
     const cart = JSON.parse(localStorage.getItem('cart')) || []
     const total = cart.reduce((a, b) => a + b.price * b.count, 0) + 80
-    const [check, setCheck] = useState(false)
+    const date = new Date();
+    const orderID = 'KK' + date.getDate() + Number(date.getMonth() + 1) + date.getFullYear() + date.getHours();
+    const [check, setCheck] = useState(false);
     const [user, setUser] = useState({
         name: '',
         email: '',
         phone: '',
         address: '',
-        price: 0
+        price: 0,
+        orderId: orderID
     });
     const [payData, setPayData] = useState();
-    const date = new Date();
-    const orderID = 'KK' + date.getDate() + Number(date.getMonth() + 1) + date.getFullYear() + date.getHours();
 
     function handelOrder() {
         if (check) {
