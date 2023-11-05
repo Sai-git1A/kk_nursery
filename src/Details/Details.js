@@ -13,7 +13,13 @@ export default function() {
     const param = useParams();
     const [loading, setLoading] = useState(false);
     const item = JSON.parse(localStorage.getItem('item'));
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState(() => {
+        const cart = localStorage.getItem('cart');
+        if (cart) {
+            return JSON.parse(cart);
+        }
+        return [];
+    });
     const [details, setDetails] = useState({});
 
     const StyledCircularProgress = styled(CircularProgress) ({

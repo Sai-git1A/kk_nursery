@@ -4,7 +4,7 @@ import Footer from '../Components/Footer/Footer';
 import './Cancellation.css';
 
 export default function cancellation() {
-    const cart = {}
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
     return (
         <>
         <Navbar data={cart}/>

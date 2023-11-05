@@ -4,7 +4,8 @@ import Footer from '../Components/Footer/Footer';
 import './Contact.css';
 
 export default function Contact() {
-    const cart = {}
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
     return (
         <>
         <Navbar data={cart}/>

@@ -4,7 +4,8 @@ import Footer from '../Components/Footer/Footer';
 import './Shipping.css';
 
 export default function Shipping() {
-    const cart = {}
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
     return (
         <>
         <Navbar data={cart}/>

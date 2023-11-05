@@ -18,7 +18,13 @@ function Home () {
     const [carousel, setCarousel] = useState([]);
     const [category, setCategory] = useState([]);
     const [pIndoorPlants, setPIndoorPlants] = useState([]);
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState(() => {
+      const cart = localStorage.getItem('cart');
+      if (cart) {
+          return JSON.parse(cart);
+      }
+      return [];
+  });
     const [loading, setLoading] = useState(false);
     const [swo, setSwo] = useState(false);
     const [swoTitle, setSwoTitle] = useState();

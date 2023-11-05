@@ -5,7 +5,7 @@ import SWODetails from '../Components/SWO_Details/SWO_Details';
 import './SWO.css';
 
 export default function SWO() {
-    const cart = [];
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const [swo, setSwo] = useState(false);
     const [swoTitle, setSwoTitle] = useState();
     const [swoImg, setSwoImg] = useState();
@@ -14,7 +14,8 @@ export default function SWO() {
         setSwoTitle(title);
         setSwoImg(img)
         setSwo(!swo);
-      }
+    }
+
     return (
         <>
            <Navbar data={cart}/>

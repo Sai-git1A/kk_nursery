@@ -4,7 +4,8 @@ import Footer from '../Components/Footer/Footer';
 import './Privacy.css';
 
 export default function Privacy() {
-    const cart = {}
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
     return (
         <>
         <Navbar data={cart}/>
