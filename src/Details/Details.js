@@ -34,6 +34,10 @@ export default function() {
     }
 
     function handelATC(key, img, title, price) {
+        if (cart.some(item => item.title === title)) {
+            alert('Item already in cart');
+            return;
+        }
         setCart(preval => [...preval, {key: key, imgURL: img, title: title, price: price, count:1}]);
     }
 

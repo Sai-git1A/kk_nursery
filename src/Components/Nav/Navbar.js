@@ -34,6 +34,7 @@ export default function Navbar(props) {
     const handelDelete = (title) => {
         const filterCart = cartData.filter(item => item.title !== title);
         setCartData(filterCart);
+        setCount(filterCart.length);
         localStorage.setItem('cart', JSON.stringify(filterCart));
     }
 
