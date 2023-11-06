@@ -15,10 +15,6 @@ export default function Navbar(props) {
         setIsOpen(!isOpen);
     }
 
-    const profile = () => {
-        alert('Profile');
-    }
-
     function cartClick() {
         setCart(true);
     }
