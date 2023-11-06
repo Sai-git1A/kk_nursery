@@ -3,10 +3,6 @@ import {Link, useNavigate} from 'react-router-dom';
 import Dialog from '../Dialog/Dialog';
 import './Navbar.css';
 
-const profile = () => {
-    alert('Profile');
-}
-
 export default function Navbar(props) {
     const navigate = useNavigate();
     const [cart, setCart] = useState(false);
@@ -17,6 +13,10 @@ export default function Navbar(props) {
 
     function menu() {
         setIsOpen(!isOpen);
+    }
+
+    const profile = () => {
+        alert('Profile');
     }
 
     function cartClick() {
@@ -81,7 +81,7 @@ export default function Navbar(props) {
         <input className='search' type='text' name='search-text' placeholder='Search' />
         <button className='btn btn-search' type='submit'><i className="fa-solid fa-magnifying-glass nav-icons"></i></button>
         </div>
-            <button className='btn btn-profile' onClick={() => profile()}><i className="fa-solid fa-user nav-icons"></i></button>
+            <button className='btn btn-profile' onClick={() => navigate('/user')}><i className="fa-solid fa-user nav-icons"></i></button>
             <button className='btn btn-cart' onClick={() => cartClick()}><i className="fa-solid fa-basket-shopping nav-icons"></i><span className='cart-count'>{count}</span></button>
         </div>
         </div>

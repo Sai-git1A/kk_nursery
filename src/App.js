@@ -11,6 +11,7 @@ import Shipping from './Shipping/Shipping';
 import Cancellation from './Cancellation/Cancellation';
 import Contact from './Contact/Contact';
 // import Checkout from './Checkout/Checkout';
+import User from './User/User';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='/cancellation-refund' element={<Cancellation />} />
         <Route path='/contact-us' element={<Contact />} />
         {/* <Route path='/checkout' element={<Checkout />} /> */}
+        <Route path='/user' element={<User />} />
       </Routes>
     </Router>
   );
