@@ -1,5 +1,5 @@
 #Carousel {
-  margin: 0 auto;
+  margin: 2% auto;
   overflow: hidden;
   position: relative;
   width: 98dvw;
@@ -18,7 +18,6 @@
 }
 
 .carousel-dots {
-  background-color: rgba(78, 148, 79, 0.4);
   text-align: center;
   position: absolute;
   bottom: 4px;
