@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
+import { CircularProgress, styled } from '@mui/material';
 import Navbar from "../Components/Nav/Navbar";
 import Footer from "../Components/Footer/Footer";
 import './Checkout.css';
@@ -10,6 +11,7 @@ export default function Checkout() {
     const date = new Date();
     const orderID = 'KK' + date.getDate() + Number(date.getMonth() + 1) + date.getFullYear() + date.getHours() + date.getMinutes() + date.getSeconds();
     const [check, setCheck] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [user, setUser] = useState({
         name: '',
         email: '',
@@ -20,23 +22,51 @@ export default function Checkout() {
     });
     const [payData, setPayData] = useState();
 
-    function handelOrder() {
+    const StyledCircularProgress = styled(CircularProgress) ({
+        color: '#4E944F'
+    });
+
+    // function handelOrder() {
+    //     if (check) {
+    //         setLoading(!loading);
+    //         fetch('https://kknurseries-phonepe.vercel.app/place-order', {
+    //             method: 'POST',
+    //             mode: 'cors',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //                 'Accept': 'application/json',
+    //             },
+    //             body: JSON.stringify(user)
+    //         })
+    //         .then(res => res.json())
+    //         .then(data => setPayData(data))
+    //     } else {
+    //         alert('Please check the terms and conditions')
+    //     }
+    // }
+
+    const handelOrder = async () => {
         if (check) {
-            fetch('https://kknurseries-phonepe.vercel.app/place-order', {
-                method: 'POST',
-                mode: 'cors',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                },
-                body: JSON.stringify(user)
-            })
-            .then(res => res.json())
-            .then(data => setPayData(data))
-        } else {
-            alert('Please check the terms and conditions')
+            setLoading(true);
+        try {
+          const response = await fetch('https://kknurseries-phonepe.vercel.app/place-order', {
+                        method: 'POST',
+                        mode: 'cors',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json',
+                        },
+                        body: JSON.stringify(user)
+                    });
+          setPayData(await response.json());
+        } catch (error) {
+          alert(error);
         }
-    }
+        setLoading(false);
+        } else {
+            alert('Please check the terms and conditions');
+        }
+      };
 
     return (
         <>
@@ -77,11 +107,14 @@ export default function Checkout() {
             <button className="btn-place-order" onClick={() => handelOrder()}>Place Order</button>
         </div>
         </div>
-        {payData && <div className="pay-div-main">
-            <div className="pay-div">
-            <h3 className="pay-now-title">{payData.result.message}</h3>
-            <Link className="pay-now" to={payData.result.data.instrumentResponse.redirectInfo.url}>Pay Now</Link>
-            </div>
+        {(loading || payData) && <div className="pay-div-main">
+        <div className="pay-div">
+            {loading && <StyledCircularProgress />}
+            {payData && <>
+                <h3 className="pay-now-title">{payData.result.message}</h3>
+                <Link className="pay-now" to={payData.result.data.instrumentResponse.redirectInfo.url}>Pay Now</Link>
+            </>}
+        </div>
         </div>}
         <Footer />
         </>
