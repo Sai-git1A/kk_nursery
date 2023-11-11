@@ -7,7 +7,7 @@ import './Checkout.css';
 
 export default function Checkout() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const total = cart.reduce((a, b) => a + b.price * b.count, 0) + 80
+    const total = cart.reduce((a, b) => a + b.price * b.count, 0) + 0
     const date = new Date();
     const orderID = 'KK' + date.getDate() + Number(date.getMonth() + 1) + date.getFullYear() + date.getHours() + date.getMinutes() + date.getSeconds();
     const [check, setCheck] = useState(false);
