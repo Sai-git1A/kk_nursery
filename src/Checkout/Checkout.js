@@ -7,9 +7,9 @@ import './Checkout.css';
 
 export default function Checkout() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const total = cart.reduce((a, b) => a + b.price * b.count, 0) + 80
+    const total = cart.reduce((a, b) => a + b.price * b.count, 0);
     const date = new Date();
-    const orderID = 'KK' + date.getDate() + Number(date.getMonth() + 1) + date.getFullYear() + date.getHours() + date.getMinutes() + date.getSeconds();
+    const orderID = 'KK-' + date.getDate() + Number(date.getMonth() + 1) + date.getFullYear() + '-' + ((date.getHours() + 24) % 12 || 12 )+ date.getMinutes() + date.getSeconds();
     const [check, setCheck] = useState(false);
     const [loading, setLoading] = useState(false);
     const [user, setUser] = useState({
@@ -18,7 +18,9 @@ export default function Checkout() {
         phone: '',
         address: '',
         price: 0,
-        orderId: orderID
+        orderId: orderID,
+        date: date.getDate() + '-' + Number(date.getMonth() + 1) + '-' + date.getFullYear(),
+        cartData: cart
     });
     const [payData, setPayData] = useState();
 
@@ -46,27 +48,38 @@ export default function Checkout() {
     // }
 
     const handelOrder = async () => {
-        if (check) {
-            setLoading(true);
-        try {
-          const response = await fetch('https://kknurseries-phonepe.vercel.app/place-order', {
-                        method: 'POST',
-                        mode: 'cors',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json',
-                        },
-                        body: JSON.stringify(user)
-                    });
-          setPayData(await response.json());
-        } catch (error) {
-          alert(error);
-        }
-        setLoading(false);
-        } else {
-            alert('Please check the terms and conditions');
-        }
-      };
+        if (user.name !== '' || user.email !== '' || user.phone !== '' || user.address !== '') {
+            if (/@gmail\.com$/.test(user.email)) {
+                if (user.phone.length !== 10) {
+                    alert('We found the phone number you entered is invalid.');
+                } else {
+                    if (check) {
+                        setLoading(true);
+                    try {
+                      const response = await fetch('https://kknurseries-phonepe.vercel.app/place-order', {
+                                    method: 'POST',
+                                    mode: 'cors',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                        'Accept': 'application/json',
+                                    },
+                                    body: JSON.stringify(user)
+                                });
+                      setPayData(await response.json());
+                    } catch (error) {
+                      alert(error);
+                    }
+                    setLoading(false);
+                    } else {
+                        alert('Please check the terms and conditions');
+                    }
+                }
+            } else {
+                alert('We found the email you entered is invalid.');
+            }
+            } else {
+            alert('We required your details to place order, please enter your details.');
+        }}
 
     return (
         <>
@@ -92,7 +105,7 @@ export default function Checkout() {
             </div>)}
             </div>}
             <div className="checkout-total">
-                <p>Total: ₹{cart.reduce((a, b) => a + b.price * b.count, 0)}</p>
+                <p>Total: ₹{total}</p>
                 <p>Delivery Charge: ₹80</p>
                 <p>Total Payable: ₹{total}</p>
             </div>
