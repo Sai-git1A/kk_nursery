@@ -107,7 +107,7 @@ export default function Checkout() {
             <div className="checkout-total">
                 <p>Total: ₹{total}</p>
                 <p>Delivery Charge: ₹80</p>
-                <p>Total Payable: ₹{total}</p>
+                <p>Total Payable: ₹{total + 80}</p>
             </div>
         </div>
         <div className="checkout-user-details">
