@@ -130,6 +130,10 @@
     width: 90vw;
 }
 
+.nav-links-div:last-child {
+    border: none;
+}
+
 .nav-link {
     color: black;
     cursor: pointer;
