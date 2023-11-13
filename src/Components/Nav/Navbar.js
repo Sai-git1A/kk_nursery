@@ -56,6 +56,14 @@ export default function Navbar(props) {
         localStorage.setItem('cart', JSON.stringify(updatedCart));
     }
 
+    const handelCheckout = () => {
+        if (cartData.length === 0) {
+            alert('Cart is empty');
+        } else {
+            navigate('/checkout')
+        }
+    }
+
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(props.data));
         const cartData = localStorage.getItem('cart');
@@ -141,7 +149,7 @@ export default function Navbar(props) {
             </div>}
             </div>
             <div className='cart-footer'>
-                <button className='cart-btn checkout' onClick={() => navigate('/checkout')}>CHECKOUT</button>
+                <button className='cart-btn checkout' onClick={() => handelCheckout()}>Checkout</button>
             </div>
         </div>}
         </>

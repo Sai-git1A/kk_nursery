@@ -28,25 +28,6 @@ export default function Checkout() {
         color: '#4E944F'
     });
 
-    // function handelOrder() {
-    //     if (check) {
-    //         setLoading(!loading);
-    //         fetch('https://kknurseries-phonepe.vercel.app/place-order', {
-    //             method: 'POST',
-    //             mode: 'cors',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //                 'Accept': 'application/json',
-    //             },
-    //             body: JSON.stringify(user)
-    //         })
-    //         .then(res => res.json())
-    //         .then(data => setPayData(data))
-    //     } else {
-    //         alert('Please check the terms and conditions')
-    //     }
-    // }
-
     const handelOrder = async () => {
         if (user.name !== '' || user.email !== '' || user.phone !== '' || user.address !== '') {
             if (/@gmail\.com$/.test(user.email)) {
@@ -114,7 +95,7 @@ export default function Checkout() {
         </div>
         <div className="checkout-user-details">
             <h1 className="checkout-title">User Details</h1>
-            <div className="user-box"><input className="user-details" type="text" value={user.name} name="name" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value, price: total * 100}))} placeholder="Name" /></div>
+            <div className="user-box"><input className="user-details" type="text" value={user.name} name="name" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value, price: (total + 80) * 100}))} placeholder="Name" /></div>
             <div className="user-box"><input className="user-details" type="email" value={user.email} name="email" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value}))} placeholder="Email" /></div>
             <div className="user-box"><input className="user-details" type="tel" value={user.phone} name="phone" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value}))} placeholder="Phone" /></div>
             <div className="user-box"><textarea className="user-details" type="text" value={user.address} name="address" onChange={(e) => setUser(preval => ({...preval, [e.target.name]: e.target.value}))} placeholder="Address" rows="10" cols="50" /></div>
@@ -127,7 +108,19 @@ export default function Checkout() {
             {loading && <StyledCircularProgress />}
             {payData && <>
                 <h3 className="pay-now-title">{payData.result.message}</h3>
+                <p>Order ID: {orderID}</p>
+                <div className="pay-user-details-div">
+                    <h4 className="pay-now-title">Conform your details</h4>
+                    <p>{user.name}</p>
+                    <p>{user.email}</p>
+                    <p>+91 {user.phone}</p>
+                    <p>{user.address}</p>
+                    <p>Total: ₹{total + 80}</p>
+                </div>
+                <div className="pay-now-cancel-div">
+                <Link className="cancel-now" onClick={() => window.location.reload()}>Cancel</Link>
                 <Link className="pay-now" to={payData.result.data.instrumentResponse.redirectInfo.url}>Pay Now</Link>
+                </div>
             </>}
         </div>
         </div>}

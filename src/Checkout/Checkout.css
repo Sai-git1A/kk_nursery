@@ -76,10 +76,28 @@
 }
 
 .pay-now-title {
+    margin-bottom: 1.5%;
+}
+
+.pay-div p {
     margin-bottom: 2%;
 }
 
-.pay-now {
+.pay-user-details-div {
+    text-align: left;
+}
+
+.pay-user-details-div p {
+    margin-bottom: 1%;
+}
+
+.pay-now-cancel-div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pay-now, .cancel-now {
     color: #4E944F;
     text-decoration: none;
 }
@@ -103,5 +121,9 @@
 
     .checkout-title {
         font-size: 1.2rem;
+    }
+
+    .pay-div {
+        width: 80dvw;
     }
 }
