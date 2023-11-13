@@ -82,17 +82,6 @@ export default function Checkout() {
         }
     };
 
-    const payNow = async () => {
-        try {
-            const response = await fetch(payData.result.data.instrumentResponse.redirectInfo.url, {
-                method: 'GET'
-            });
-            alert(await response.json());
-        } catch (error) {
-            alert(error);
-        }
-    }
-
 
     return (
         <>
@@ -139,7 +128,6 @@ export default function Checkout() {
             {payData && <>
                 <h3 className="pay-now-title">{payData.result.message}</h3>
                 <Link className="pay-now" to={payData.result.data.instrumentResponse.redirectInfo.url}>Pay Now</Link>
-                <span onClick={() => payNow()}>Pay Now</span>
             </>}
         </div>
         </div>}
