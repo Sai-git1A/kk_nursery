@@ -79,6 +79,24 @@
     font-size: 1.25rem;
 }
 
+.empty-basket-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100dvh;
+}
+
+.empty-basket {
+    color: grey;
+    font-size: 5rem;
+    margin-bottom: 2%;
+}
+
+.empty-basket-text {
+    color: #4E944F;
+}
+
 .cart-count {
     background-color: #4E944F;
     border-radius: 50%;

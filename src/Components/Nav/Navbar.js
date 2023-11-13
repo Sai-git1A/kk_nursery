@@ -115,11 +115,11 @@ export default function Navbar(props) {
         {/* Cart */}
         {cart && <div className='cart'>
             <div className='cart-header'>
-                <span className='cart-title'>Your Cart</span>
+                <span className='cart-title'>Basket</span>
                 <button className='btn-cart-close' onClick={() => cartClose()}><i className="fa-solid fa-xmark cart-icon"></i></button>
             </div>
             <div className='cart-items'>
-            {cartData.length > 0 && cartData.map(item => <div className='cart-item' key={item.key}>
+            {cartData.length > 0 ? cartData.map(item => <div className='cart-item' key={item.key}>
             <img className='cart-item-img' src={item.imgURL} loading='lazy' alt='cart-img'/>
             <div className='cart-item-content'>
             <div className='cart-item-box-1'>
@@ -135,7 +135,10 @@ export default function Navbar(props) {
                 </div>
             </div>
             </div>
-            </div>)}
+            </div>): <div className='empty-basket-div'>
+            <i className="fa-solid fa-basket-shopping empty-basket"></i>
+            <h3 className='empty-basket-text'>Your Basket Is Empty</h3>
+            </div>}
             </div>
             <div className='cart-footer'>
                 <button className='cart-btn checkout' onClick={() => navigate('/checkout')}>CHECKOUT</button>

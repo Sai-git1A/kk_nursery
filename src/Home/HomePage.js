@@ -175,7 +175,7 @@ return (
                 <img className='pip-img' src={item.imgURL} onClick={() => handelClick(item.title, item.imgURL, item.price)} loading='eager' alt={item.id}/>
                 <span className='pip-name'>{item.title}</span>
                 <span className='pip-price'>₹{item.price}</span>
-                <button className='btn-atc' onClick={() => handelATC(item._id, item.imgURL, item.title, item.price)}>ADD TO CART</button>
+                <button className='btn-atc' onClick={() => handelATC(item._id, item.imgURL, item.title, item.price)}>Add To Basket</button>
             </div>
         ))}
         <i className="fa-solid fa-circle-arrow-right" onClick={() => pipScrollRight()}></i>

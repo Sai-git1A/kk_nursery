@@ -56,8 +56,7 @@ export default function() {
                 <div className="details-content">
                     <h1 className="details-name">{details.name}</h1>
                     <span className="details-price">₹{item.price}</span>
-                    <button className="btn-details-atc" onClick={() => handelATC(details._id, item.imgURL, details.name, item.price)}>ADD TO CART</button>
-                    <button className="btn-details-bin">BUY IT NOW</button>
+                    <button className="btn-details-atc" onClick={() => handelATC(details._id, item.imgURL, details.name, item.price)}>Add To Basket</button>
                     <div className="description">
                     <h2 className="details-s-name">{details.scientificName}</h2>
                     <div className="details-tags">{details.specifications ? details.specifications.map(item => <span className="details-tag" key={item}>{item}</span>) : ''}</div>
