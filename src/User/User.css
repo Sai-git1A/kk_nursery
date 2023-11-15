@@ -9,6 +9,32 @@
     width: 100dvw;
 }
 
+.order {
+    border: 1px solid lightgrey;
+    border-radius: 12px;
+    box-shadow: 4px 4px 5px lightgrey;
+    padding: 1%;
+    margin-bottom: 1.5%;
+}
+
+.order-head {
+    margin-bottom: 1%;
+}
+
+.order-head h3 {
+    display: inline-block;
+    width: 70dvw;
+}
+
+.order-head span {
+    color: grey;
+    margin-right: 2%;
+}
+
+.order-body h4 {
+    font-weight: normal;
+}
+
 .user-note {
     display: flex;
     align-items: center;
@@ -58,6 +84,7 @@
 
 .get-orders-history {
     border: none;
+    background-color: transparent;
     color: #4E944F;
     cursor: pointer;
     font-size: 1rem;
