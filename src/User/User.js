@@ -36,7 +36,7 @@ export default function User() {
                     </div>
                     {toggle && <div className='order-body'>
                         <h4>Plants Details</h4>
-                        {item.cartDate.map(item => (
+                        {item.cartData.map(item => (
                         <div className='cart-item' key={item.key}>
                             <img className='cart-item-img' src={item.imgURL} loading='lazy' alt='cart-img'/>
                             <div className='cart-item-content'>

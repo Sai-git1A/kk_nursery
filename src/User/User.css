@@ -32,6 +32,7 @@
 }
 
 .order-body h4 {
+    border-bottom: 2px solid #4E944F;
     font-weight: normal;
 }
 
