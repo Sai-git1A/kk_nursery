@@ -91,6 +91,11 @@
         width: 100%;
     }
 
+    body .nav-links-div:last-child {
+        border-right: 2px solid #4E944F;
+        border-bottom: 2px solid #4E944F;
+    }
+
     body .nav-link {
         font-size: 1.2rem;
         position: relative;
