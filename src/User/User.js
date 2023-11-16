@@ -35,34 +35,42 @@ export default function User() {
                         <i className="fa-solid fa-caret-right"></i>}
                     </div>
                     {toggle && <div className='order-body'>
+                        <div className='plants-details-div details-div'>
                         <h4>Plants Details</h4>
                         {item.cartData.map(item => (
-                        <div className='cart-item' key={item.key}>
+                        <div className='basket-item' key={item.key}>
                             <img className='cart-item-img' src={item.imgURL} loading='lazy' alt='cart-img'/>
                             <div className='cart-item-content'>
                             <div className='cart-item-box-1'>
-                                <span className='cart-item-title'>{item.title}</span>
+                                <h5 className='basket-item-title'>{item.title}</h5>
                             </div>
                             <div className='cart-item-box-2'>
-                                <span className='cart-item-price'>₹{item.price}</span>
+                                <span className='basket-item-price'>₹{item.price}</span>
                                 <div className='quantity-box'>
-                                <span className='quantity'>{item.count}</span>
+                                <span className='basket-quantity'>Q{item.count}</span>
                                 </div>
                             </div>
                             </div>
                         </div>
                         ))}
+                        </div>
+                        <div className='details-div'>
+                        <div className='user-details-div'>
                         <h4>User Details</h4>
                         <div className='user-details'>
-                            <span className='user-name'>{item.name}</span>
-                            <span className='user-phone'>{item.phone}</span>
-                            <span className='user-email'>{item.email}</span>
-                            <span className='user-address'>{item.address}</span>
+                            <span className='user-name'>Name: {item.name}</span>
+                            <span className='user-tel'>Phone: {item.phone}</span>
+                            <span className='user-email'>Email: {item.email}</span>
+                            <span className='user-address'>Address: {item.address}</span>
                         </div>
+                        </div>
+                        <div className='payments-details-div'>
                         <h4>Payment Details</h4>
                         <div className='payment-details'>
-                            <span className='payment-type'>{item.pay_type}</span>
-                            <span className='payment-status'>{item.pay_status}</span>
+                            <span className='type'>Method: {item.pay_type}</span>
+                            <span className='status'>Status: {item.pay_status}</span>
+                        </div>
+                        </div>
                         </div>
                     </div>}
                     </div>

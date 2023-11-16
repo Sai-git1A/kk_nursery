@@ -81,7 +81,7 @@ export default function Checkout() {
             <div className='cart-item-box-2'>
                 <span className='cart-item-price'>₹{item.price}</span>
                 <div className='quantity-box'>
-                <span className='quantity'>{item.count}</span>
+                <span className='quantity'>Q{item.count}</span>
                 </div>
             </div>
             </div>

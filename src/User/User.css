@@ -4,7 +4,6 @@
 }
 
 .user-body {
-    position: relative;
     height: 100dvh;
     width: 100dvw;
 }
@@ -12,9 +11,8 @@
 .order {
     border: 1px solid lightgrey;
     border-radius: 12px;
-    box-shadow: 4px 4px 5px lightgrey;
     padding: 1%;
-    margin-bottom: 1.5%;
+    margin: 0 0.5% 1.5%;
 }
 
 .order-head {
@@ -22,18 +20,62 @@
 }
 
 .order-head h3 {
+    color: #4E944F;
     display: inline-block;
     width: 70dvw;
 }
 
 .order-head span {
-    color: grey;
     margin-right: 2%;
+}
+
+.order-body {
+    display: flex;
 }
 
 .order-body h4 {
     border-bottom: 2px solid #4E944F;
+}
+
+.details-div {
+    margin-right: 2%;
+    width: calc(100dvw - 50dvw);
+}
+
+.details-div:last-child {
+    margin-right: 0;
+}
+
+.basket-item {
+    border-bottom: 2px solid lightgrey;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+    padding: 1%;
+}
+
+.basket-item-price,
+.basket-quantity {
+    font-size: 0.8rem;
+}
+
+.user-details-div {
+    margin-bottom: 2%;
+}
+
+.plants-details-div h5{
     font-weight: normal;
+}
+
+.user-details,
+.payment-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.type,
+.status {
+    font-size: 0.8rem;
 }
 
 .user-note {
@@ -59,8 +101,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    bottom: 0;
     width: 100dvw;
 }
 
@@ -69,7 +109,6 @@
     border-radius: 5px;
     display: flex;
     padding: 1%;
-    margin-bottom: 2%;
     width: 50%;
 }
 
