@@ -31,6 +31,8 @@ function Home () {
     const [swoImg, setSwoImg] = useState();
     const [pipScrollPosition, setPipScrollPosition] = useState(0);
     const [branchScrollPosition, setBranchScrollPosition] = useState(0);
+    const [coordinates, setCoordinates] = useState();
+    const [weather, setWeather] = useState({});
     const pipDiv = useRef(null);
     const branchDiv = useRef(null);
     let browserName;
@@ -45,6 +47,25 @@ function Home () {
     const StyledCircularProgress = styled(CircularProgress) ({
         color: '#4E944F'
     });
+
+    navigator.geolocation.getCurrentPosition(position => {
+      setCoordinates(position.coords.latitude + ',' + position.coords.longitude);
+    });
+
+    useEffect(() => {
+        const handelWeather = async () => {
+            try {
+                const response = await axios.get(`https://api.tomorrow.io/v4/weather/realtime?location=${coordinates}&units=metric&apikey=i97M8c6eHi4OnlNQ3PzrkexwKzvaZRBL`);
+                const data = await response.json();
+                setWeather(data.data);
+                console.log(data.data);
+            }
+            catch (error) {
+                console.log(error);
+            }
+        }
+        handelWeather();
+    }, [coordinates]);
 
     function handelClick(title, img, price) {
         const obj = {
@@ -135,6 +156,8 @@ return (
     <Category data={category} />
 
     <p style={{display: 'none'}}>{browserName}</p>
+
+    {weather > 0 && <h1 className='weather-title'>Got the Weather Data</h1>}
 
     {/* Services We Offer */}
     <h1 className='swo-title'>SERVICES WE OFFER</h1>
