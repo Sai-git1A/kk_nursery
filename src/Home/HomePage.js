@@ -31,12 +31,11 @@ function Home () {
     const [swoImg, setSwoImg] = useState();
     const [pipScrollPosition, setPipScrollPosition] = useState(0);
     const [branchScrollPosition, setBranchScrollPosition] = useState(0);
-    // const [coordinates, setCoordinates] = useState();
     const pipDiv = useRef(null);
     const branchDiv = useRef(null);
     let browserName;
 
-    const fetchData = async () => {
+    const fetchData = async (location) => {
         setLoading(true);
         const resPIndoorPlants = await axios.get('https://kk-nursery-api.vercel.app/popular-indoor-plants')
         setPIndoorPlants(resPIndoorPlants.data);
@@ -46,10 +45,6 @@ function Home () {
     const StyledCircularProgress = styled(CircularProgress) ({
         color: '#4E944F'
     });
-
-    // navigator.geolocation.getCurrentPosition(position => {
-    //   setCoordinates(position.coords.latitude + ',' + position.coords.longitude);
-    // });
 
     function handelClick(title, img, price) {
         const obj = {
