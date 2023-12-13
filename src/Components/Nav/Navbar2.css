@@ -25,9 +25,15 @@
         width: 95vw;
     }
 
-    .btn-profile, .btn-cart {
+    .btn-weather, 
+    .btn-profile, 
+    .btn-cart {
         position: absolute;
         top: 12%;
+    }
+
+    .btn-weather {
+        right: 21%;
     }
 
     .btn-profile {

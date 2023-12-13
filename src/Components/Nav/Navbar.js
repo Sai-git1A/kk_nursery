@@ -85,6 +85,7 @@ export default function Navbar(props) {
         <input className='search' type='text' name='search-text' placeholder='Search' />
         <button className='btn btn-search' type='submit'><i className="fa-solid fa-magnifying-glass nav-icons"></i></button>
         </div>
+            <button className='btn btn-weather' onClick={() => alert('Coming soon...')}><i className="fa-solid fa-w nav-icons">&deg;</i></button>
             <button className='btn btn-profile' onClick={() => navigate('/user')}><i className="fa-solid fa-user nav-icons"></i></button>
             <button className='btn btn-cart' onClick={() => cartClick()}><i className="fa-solid fa-basket-shopping nav-icons"></i><span className='cart-count'>{count}</span></button>
         </div>
