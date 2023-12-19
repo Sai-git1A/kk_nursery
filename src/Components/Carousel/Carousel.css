@@ -1,0 +1,45 @@
+#Carousel {
+  margin: 2% auto;
+  overflow: hidden;
+  position: relative;
+  width: 98dvw;
+}
+
+.carousel-slider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+  scroll-behavior: smooth;
+}
+
+.carousel-slide {
+  display: inline-block;
+  height: 500px;
+  width: 98vw;
+}
+
+.carousel-dots {
+  text-align: center;
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+}
+
+.carousel-dot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+}
+
+@media only screen and (max-width: 680px) {
+  .carousel-slide {
+    height: 50vw;
+  }
+
+  .carousel-dot {
+    height: 10px;
+    width: 10px;
+  }
+}

@@ -1,0 +1,135 @@
+.listing-category {
+    display: flex;
+    margin-top: 3%;
+    overflow: scroll;
+    white-space: nowrap;
+}
+
+.listing-category::-webkit-scrollbar {
+    display: none;
+}
+
+.listing-category-item {
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1.5%;
+    padding: 1%;
+}
+
+.filter {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5% 0;
+}
+
+.btn-sort {
+    background-color: #4E944F;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.8%;
+}
+
+.sort {
+    border: 1px solid lightgrey;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 1%;
+    position: absolute;
+    right: 0;
+    width: 20vw;
+    z-index: 1;
+}
+
+.sort-item {
+    padding: 4%;
+    cursor: pointer;
+}
+
+.listing-category-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+.listing::-webkit-scrollbar {
+    display: none;
+}
+
+.list-item {
+    border: 1px solid lightgrey;
+    border-radius: 12px;
+    padding: 1%;
+    display: flex;
+    margin-left: 1.5%;
+    margin-bottom: 1.5%;
+    flex-direction: column;
+    align-items: center;
+    transition: ease 0.2s;
+}
+
+.list-item:hover {
+    transform: scale(1.01);
+}
+
+.list-item-img {
+    cursor: pointer;
+    width: 250px;
+}
+
+.list-item-name {
+    font-size: 1.5rem;
+    margin: 2%;
+    text-align: center;
+}
+
+.list-item-price {
+    color: #4E944F;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 2%;
+}
+
+@media only screen and (max-width: 680px) {
+    .listing-category {
+        overflow: scroll;
+        white-space: nowrap;
+    }
+
+    .listing-category-name {
+        font-size: 1rem;
+    }
+
+    .list-item {
+        padding: 2%;
+    }
+
+    .list-item-img {
+        width: 160px;
+    }
+
+    .list-item-name {
+        font-size: 1rem;
+    }
+
+    .filter {
+        margin: 2% 0;
+    }
+
+    .btn-sort {
+        padding: 2%;
+    }
+
+    .sort {
+        width: 90vw;
+    }
+}

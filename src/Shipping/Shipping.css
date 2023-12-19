@@ -1,0 +1,56 @@
+.shipping-main {
+    padding: 2%;
+    text-align: justify;
+}
+
+.shipping-title-div,
+.shipping-info-div,
+.shipping-note {
+    margin-bottom: 2%;
+}
+
+.shipping-title {
+    color: #4E944F;
+    text-align: center;
+}
+
+.shipping-title,
+.shipping-subtitle {
+    margin-bottom: 10px;
+}
+
+.shipping-text {
+    color: grey;
+}
+
+.shipping-info-div ul {
+    margin-left: 2%;
+}
+
+.shipping-info-div li {
+    color: grey;
+}
+
+@media only screen and (max-width: 680px) {
+    .shipping-title {
+        font-size: 1.2rem;
+    }
+
+    .shipping-subtitle {
+        font-size: 1rem;
+    }
+
+    .shipping-date,
+    .shipping-text,
+    .shipping-note {
+        font-size: 0.9rem;
+    }
+
+    .shipping-info-div ul {
+        margin-left: 5%;
+    }
+
+    .shipping-info-div li {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,40 @@
+.terms-main {
+    padding: 2%;
+    text-align: justify;
+}
+
+.terms-title-div,
+.terms-info-div,
+.terms-note {
+    margin-bottom: 2%;
+}
+
+.terms-title {
+    color: #4E944F;
+    text-align: center;
+}
+
+.terms-title,
+.terms-subtitle {
+    margin-bottom: 10px;
+}
+
+.terms-text {
+    color: grey;
+}
+
+@media only screen and (max-width: 680px) {
+    .terms-title {
+        font-size: 1.2rem;
+    }
+
+    .terms-subtitle {
+        font-size: 1rem;
+    }
+
+    .terms-date,
+    .terms-text,
+    .terms-note {
+        font-size: 0.9rem;
+    }
+}
