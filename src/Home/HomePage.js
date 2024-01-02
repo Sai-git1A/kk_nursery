@@ -7,7 +7,6 @@ import Carousel from '../Components/Carousel/Carousel';
 import Category from '../Components/Category/Category';
 import SWODetails from '../Components/SWO_Details/SWO_Details';
 import Footer from '../Components/Footer/Footer';
-import Google from '../Components/Google_Ads';
 import data from '../Carousel.json';
 import data2 from '../Category.json';
 import './Home.css';
@@ -174,7 +173,6 @@ return (
         {pIndoorPlants.length > 0 && pIndoorPlants.map(item => (
           <>
           {item.id === 3 ? <>
-            <Google slotId='8774413916' />
             <div className='pip' key={item._id}>
                 <img className='pip-img' src={item.imgURL} onClick={() => handelClick(item.title, item.imgURL, item.price)} loading='eager' alt={item.id}/>
                 <span className='pip-name'>{item.title}</span>
