@@ -5,22 +5,18 @@
   },
   {
     "id": 1,
-    "imgURL": "https://res.cloudinary.com/kknurseries/image/upload/v1699179708/Gallery/4.jpg"
-  },
-  {
-    "id": 2,
     "imgURL": "https://res.cloudinary.com/kknurseries/image/upload/v1699179715/Gallery/0.jpg"
   },
   {
-    "id": 3,
+    "id": 2,
     "imgURL": "https://res.cloudinary.com/kknurseries/image/upload/v1699179709/Gallery/9.jpg"
   },
   {
-    "id": 4,
+    "id": 3,
     "imgURL": "https://res.cloudinary.com/kknurseries/image/upload/v1699179704/Gallery/6.jpg"
   },
   {
-    "id": 5,
+    "id": 4,
     "imgURL": "https://res.cloudinary.com/kknurseries/image/upload/v1699179704/Gallery/1.jpg"
   }
 ]
